@@ -8,7 +8,7 @@ Here are some ways you can monitor the Hop Node:
 
 ### CloudWatch Logs
 
-You can stream logs to an aggregate logging service like [CloudWatch Logs](https://aws.amazon.com/cloudwatch/) and filter by log type.&#x20;
+You can stream logs to an aggregate logging service like [CloudWatch Logs](https://aws.amazon.com/cloudwatch/) and filter by log type.
 
 {% content-ref url="docker-cloudwatch-logs.md" %}
 [docker-cloudwatch-logs.md](docker-cloudwatch-logs.md)
@@ -16,7 +16,7 @@ You can stream logs to an aggregate logging service like [CloudWatch Logs](https
 
 ### Prometheus
 
-You can monitor via [Prometheus](https://github.com/prometheus/prometheus) and [Grafana](https://github.com/grafana/grafana).&#x20;
+You can monitor via [Prometheus](https://github.com/prometheus/prometheus) and [Grafana](https://github.com/grafana/grafana).
 
 {% content-ref url="prometheus-monitoring.md" %}
 [prometheus-monitoring.md](prometheus-monitoring.md)
@@ -24,4 +24,4 @@ You can monitor via [Prometheus](https://github.com/prometheus/prometheus) and [
 
 ### Other
 
-We're open to more monitoring suggestions by the community!&#x20;
+We're open to more monitoring suggestions by the community!

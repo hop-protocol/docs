@@ -173,7 +173,7 @@ Chain slug options:
 
 _Note: The RPC URL is optional and a default will be used if not specified._
 
-_Note: If the selected network doesn't support a chain, it will be ignored._&#x20;
+_Note: If the selected network doesn't support a chain, it will be ignored._
 
 ### `tokens`
 
@@ -254,7 +254,7 @@ Configure options for keystore:
 
 ### `watchers`
 
-Watchers are like services in the Hop Node.&#x20;
+Watchers are like services in the Hop Node.
 
 | Watcher                   | Description                                 |
 | ------------------------- | ------------------------------------------- |
@@ -313,7 +313,7 @@ Configure fee options. The fees are in basis points:
 
 List of bonders, used for calculating total available liquidity.
 
-The format is &#x20;
+The format is
 
 ```json
 "[TOKEN]": {

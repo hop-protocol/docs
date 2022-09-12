@@ -9,7 +9,7 @@ description: Quick steps to secure your node
 [This guide](https://www.coincashew.com/coins/overview-eth/guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node) shows you how to take additional steps to secure your server. Each security item is enumerated below.
 
 {% hint style="info" %}
-Please note that any ports listed in the guide are not specific to the Hop Node.&#x20;
+Please note that any ports listed in the guide are not specific to the Hop Node.
 {% endhint %}
 
 1. ****[**Create a non-root user with sudo privileges**](https://www.coincashew.com/coins/overview-eth/guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node#create-a-non-root-user-with-sudo-privileges)

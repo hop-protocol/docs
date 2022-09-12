@@ -62,7 +62,7 @@ When sending native asset from source chain (ie ETH on Ethereum, Optimism, Arbit
 
 ### swapAndSend vs send
 
-`swapAndSend` (on L2 AMM Wrapper) on the source chain swaps your canonical token (eg USDC) to hTokens (eg hUSDC) and burns the hTokens and then you receive the canonical tokens (eg USDC) on the destination chain.&#x20;
+`swapAndSend` (on L2 AMM Wrapper) on the source chain swaps your canonical token (eg USDC) to hTokens (eg hUSDC) and burns the hTokens and then you receive the canonical tokens (eg USDC) on the destination chain.
 
 `send` on (on L2 Bridge) is for only dealing with hTokens. The `send` method on the source chain takes your hTokens (ie hUSDC), burns the hTokens and then you receive hTokens (eg hUSDC) on the destination chain.
 

@@ -4,7 +4,7 @@ description: ⚠️ JavaScript SDK is in beta
 
 # JS SDK
 
-A JavaScript SDK is available for using and integrating with Hop.&#x20;
+A JavaScript SDK is available for using and integrating with Hop.
 
 Check out the links below to get started.
 

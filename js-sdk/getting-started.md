@@ -20,13 +20,13 @@ yarn add @hop-protocol/sdk
 
 ## CDN
 
-jsDeliver CDN
+[jsDeliver](https://www.jsdelivr.com/) CDN:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@hop-protocol/sdk@latest/hop.js"></script>
 ```
 
-unpkg CDN
+[unpkg](https://unpkg.com/) CDN:
 
 ```html
 <script src="https://unpkg.com/@hop-protocol/sdk@latest/hop.js"></script>
@@ -195,7 +195,7 @@ console.log(tx.hash)
 
 Note: a bonder fee is required when sending L2->L2. It'll calculate it the bonder fee if don't is not explicitly specified. See [specifying a custom fee](https://docs.hop.exchange/js-sdk/getting-started#specifying-custom-bonder-fee) for more info.
 
-#### Send ETH&#x20;
+#### Send ETH
 
 Sending ETH is the same as sending any other ERC-20. The sdk handles inputting the tx `value` based on input amount.
 
@@ -290,7 +290,7 @@ const tx = await bridge.send('100000000', Chain.Polygon, Chain.Gnosis, {
 console.log(tx.hash)
 ```
 
-Note: The `amountOutMin` will be `0` if one is not specified. You can use the result from `getSendData(...)` to calculate the estimated `amountOutMin` value.&#x20;
+Note: The `amountOutMin` will be `0` if one is not specified. You can use the result from `getSendData(...)` to calculate the estimated `amountOutMin` value.
 
 #### Specify custom deadline
 
@@ -382,7 +382,7 @@ if (allowance.lt(transferAmount)) {
 // ...
 ```
 
-### Send tokens over canonical bridge (deprecated)&#x20;
+### Send tokens over canonical bridge (deprecated)
 
 #### Deposit tokens (L1 -> L2):
 
@@ -427,7 +427,7 @@ console.log(amountOut) // 998608
 
 ### Estimate tokens that will be received at destination
 
-Call this to estimate how you'll receive at the destination. This is what the UI uses to show user the estimated tokens amount out.&#x20;
+Call this to estimate how you'll receive at the destination. This is what the UI uses to show user the estimated tokens amount out.
 
 ```javascript
 import { Hop, Chain } from '@hop-protocol/sdk'
@@ -446,7 +446,7 @@ The `estimatedReceived` value takes account the bonder fee and destination trans
 
 The total bonder fee is `bonderFee`+ `destinationTxFee`
 
-&#x20;Make sure to use the total bonder fee when sending a transfer over the Hop bridge.
+Make sure to use the total bonder fee when sending a transfer over the Hop bridge.
 
 ```javascript
 import { Hop, Chain } from '@hop-protocol/sdk'
@@ -480,7 +480,7 @@ console.log(toalBonderFee.toString()) // 1000000
 
 #### Estimate bonder destination transaction fee:
 
-The bonder destination transaction fee is the regular chain transaction fee that the bonder pays to get transaction included in block. The sender of the transfer must compensate the bonder for this fee which is why this fee exists. The destination transaction fee returned here is in terms of the asset being transferred.&#x20;
+The bonder destination transaction fee is the regular chain transaction fee that the bonder pays to get transaction included in block. The sender of the transfer must compensate the bonder for this fee which is why this fee exists. The destination transaction fee returned here is in terms of the asset being transferred.
 
 ```javascript
 import { Hop, Chain } from '@hop-protocol/sdk'
@@ -536,7 +536,7 @@ The `getSendData` logic can [viewed in github here](https://github.com/hop-proto
 
 ### Get available liquidity for transfer
 
-A transfer can only be bonded if the availale liquidity amount is greater than or equal to the transfer amount. The transfer bond at the destination may be delayed if it is sent when there is low or no available liquidity.&#x20;
+A transfer can only be bonded if the availale liquidity amount is greater than or equal to the transfer amount. The transfer bond at the destination may be delayed if it is sent when there is low or no available liquidity.
 
 ```javascript
 import { Hop, Chain } from '@hop-protocol/sdk'
@@ -592,7 +592,7 @@ Note: You can also utilize TheGraph for quering for transaction receipts at the 
 ```javascript
 import { providers } from 'ethers'
 import { Hop } from '@hop-protocol/sdk'
- 
+
 const hop = new Hop('mainnet')
 
 hop.setChainProviders({

@@ -4,7 +4,7 @@
 
 Add liquidity for bonding transfers.
 
-Example: Stake on 100 USDC on Arbitrum&#x20;
+Example: Stake on 100 USDC on Arbitrum
 
 {% tabs %}
 {% tab title="Docker" %}
@@ -24,7 +24,7 @@ hop-node stake --chain=arbitrum --token=USDC --amount=100
 
 Remove liquidity any unused liquidity
 
-Example: Unstake on 100 USDC on Arbitrum&#x20;
+Example: Unstake on 100 USDC on Arbitrum
 
 {% tabs %}
 {% tab title="Docker" %}

@@ -104,11 +104,11 @@ No, only outgoing connections need to be allowed but all incoming connections ca
 
 ## What are the risks of becoming a Bonder?
 
-The risks of becoming a bonder are software bug risks on the Hop node software or smart contracts. The Hop node software has been running in production for months and the code is completely [open source](https://github.com/hop-protocol/hop/tree/develop/packages/hop-node/). The smart contracts have been audited by multiple firms.&#x20;
+The risks of becoming a bonder are software bug risks on the Hop node software or smart contracts. The Hop node software has been running in production for months and the code is completely [open source](https://github.com/hop-protocol/hop/tree/develop/packages/hop-node/). The smart contracts have been audited by multiple firms.
 
 ## Do I need to run my own RPC server when becoming a Bonder?
 
-It is not a requirement to run your own RPC server on chain supported chain. You can use an existing RPC provider like Infura when running the Hop node.&#x20;
+It is not a requirement to run your own RPC server on chain supported chain. You can use an existing RPC provider like Infura when running the Hop node.
 
 ## How can I rescue my transfer that appears stuck?
 
@@ -129,7 +129,7 @@ See reports:
 * [Solidified Report (PDF)](https://s3.us-west-1.amazonaws.com/assets.hop.exchange/reports/Audit\_Report\_-\_Hop\_05.05.2021.pdf)
 * [MonocerosAlpha (PDF)](https://s3.us-west-1.amazonaws.com/assets.hop.exchange/reports/MonocerosAlpha\_-\_Hop\_Audit.pdf)
 
-## Where can I find the smart contracts?&#x20;
+## Where can I find the smart contracts?
 
 The smart contracts are available on our github: [https://github.com/hop-exchange/contracts](https://github.com/hop-exchange/contracts)
 
@@ -157,10 +157,10 @@ Available faucets:
 
 ## What are the blockchain explorers I can use?
 
-* ETH: [https://etherscan.io/](https://etherscan.io/)&#x20;
-* xDai: [https://blockscout.com/xdai/mainnet/](https://blockscout.com/xdai/mainnet/)&#x20;
-* Polygon: [https://polygonscan.com/](https://polygonscan.com/)&#x20;
-* Optimism: [https://optimistic.etherscan.io/](https://optimistic.etherscan.io/)&#x20;
+* ETH: [https://etherscan.io/](https://etherscan.io/)
+* xDai: [https://blockscout.com/xdai/mainnet/](https://blockscout.com/xdai/mainnet/)
+* Polygon: [https://polygonscan.com/](https://polygonscan.com/)
+* Optimism: [https://optimistic.etherscan.io/](https://optimistic.etherscan.io/)
 * Arbitrum: [https://arbiscan.io/](https://arbiscan.io/)
 
 ## What is the IPFS link for Hop?
@@ -292,13 +292,11 @@ Evidence and explanation of all steps required to reproduce the submission, whic
 &#x20;   \- Email address or user ID of any test accounts\
 &#x20;   \- IP address used during testing
 
-&#x20;
-
 Reward Amounts
 
 \- Informational: TBD
 
-\- Low severity: maximum of $500 for automated attacks, such as DDOS, rate-limit exploits, etc,&#x20;
+\- Low severity: maximum of $500 for automated attacks, such as DDOS, rate-limit exploits, etc,
 
 \- Medium: TBD
 

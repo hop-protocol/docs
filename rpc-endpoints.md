@@ -4,9 +4,9 @@ description: List of RPC endpoint URLs
 
 # RPC Endpoints
 
-**These are public RPC URLs available on each network.**&#x20;
+**These are public RPC URLs available on each network.**
 
-It's important to note that public RPC URLs generally have rate limits, so they may not be reliable 100% of the time.&#x20;
+It's important to note that public RPC URLs generally have rate limits, so they may not be reliable 100% of the time.
 
 For the Hop Node, it is highly recommmend to use custom RPC endpoints from an RPC provider service such as [Infura](https://infura.io/) or [Alchemy](https://www.alchemy.com/).
 

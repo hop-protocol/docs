@@ -48,7 +48,7 @@ Make sure docker daemon is running if not already.
 [installing-docker.md](installing-docker.md)
 {% endcontent-ref %}
 
-The Hop Node docker image is hosted on [Docker Hub](https://hub.docker.com/r/hopprotocol/hop-node).&#x20;
+The Hop Node docker image is hosted on [Docker Hub](https://hub.docker.com/r/hopprotocol/hop-node).
 
 Pull the Hop Node docker image:
 
@@ -88,7 +88,7 @@ This should be the bare minimum to get up and running. Check out the rest of the
 [monitoring.md](monitoring.md)
 {% endcontent-ref %}
 
-## Using NPM&#x20;
+## Using NPM
 
 _Note: Using **docker instead is highly recommended** instead of using NPM package._
 

@@ -26,7 +26,7 @@ docker run --env-file docker.env -v ~/.hop-node:/root hopprotocol/hop-node --con
 
 #### Running as daemon
 
-Use the `--detach` docker flag to run container as daemon.&#x20;
+Use the `--detach` docker flag to run container as daemon.
 
 ```bash
 docker run --detach -v ~/.hop-node:/root hopprotocol/hop-node --config /root/config.json

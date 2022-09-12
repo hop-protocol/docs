@@ -62,7 +62,7 @@ Use this subgraph for L1->L2 transfers (query for `transferSentToL2` entities)
 }
 ```
 
-#### Get source transfer info&#x20;
+#### Get source transfer info
 
 L2->L1 or L2->L2
 
@@ -168,7 +168,7 @@ L2->L1 or L2->L2
 
 L1->L2
 
-There is no bonding sending L1-> so you need to check the event `transferFromL1Completeds` and **not** `withdrawalBondeds`.&#x20;
+There is no bonding sending L1-> so you need to check the event `transferFromL1Completeds` and **not** `withdrawalBondeds`.
 
 There is **no** `transferId` when sending L1->L2 so you need to use something like `recipient` and `amount` in the where clause to match the origin transfer from the `transferSentToL2s` event.
 
@@ -192,7 +192,7 @@ There is **no** `transferId` when sending L1->L2 so you need to use something li
 
 #### Get list of transfers to a destination chain
 
-**L2->L2** or **L2->L1**&#x20;
+**L2->L2** or **L2->L1**
 
 Use L2 subgraphs for these queries (the subgraph used is the origin chain)
 
@@ -219,7 +219,7 @@ Use L2 subgraphs for these queries (the subgraph used is the origin chain)
 
 **L1->L2**
 
-Use L1 mainnet subgraph for these queries (the L1 subgraph is the origin chain)&#x20;
+Use L1 mainnet subgraph for these queries (the L1 subgraph is the origin chain)
 
 ```graphql
 {
@@ -462,7 +462,7 @@ See [TheGraph API Pagination docs](https://thegraph.com/docs/en/developer/graphq
     const result = await queryFetch(url, query, variables)
     console.log(result)
   }
-  
+
   main().catch(console.error)
 ```
 
