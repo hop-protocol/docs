@@ -1,6 +1,5 @@
-sidebar_position: 3
-title: Sample Queries
-
+---
+description: Sample Subgraph Queries
 ---
 
 # Querying
