@@ -14,7 +14,7 @@ title: Subgraph Entities
 - [`TransferRootBonded`](#transferrootbonded)
 - [`TransferRootConfirmed`](#transferrootconfirmed)
 - [`TransferRootSet`](#transferrootset)
-- [`TransferSentTol2`](#transfersentto2)
+- [`TransferSentToL2`](#transfersenttol2)
 - [`Unstake`](#unstake)
 - [`WithdrawalBondSettled`](#withdrawalbondsettled)
 - [`WithdrawalBonded`](#withdrawalbonded)
@@ -212,7 +212,7 @@ Description:
 | from             | String!      |             |
 | token            | String!      |             |
 
-# TransferSentTol2
+# TransferSentToL2
 
 Description:
 
@@ -258,7 +258,7 @@ Description:
 | from             | String!      |             |
 | token            | String!      |             |
 
-# WithdrawalBondSettle
+# WithdrawalBondSettled
 
 Description:
 
