@@ -28,7 +28,7 @@ description: Subgraph Entities
 
 # BonderAdded
 
-Description:
+Description: Event when a bonder is whitelisted
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -47,7 +47,7 @@ Description:
 
 # BonderRemoved
 
-Description:
+Description: Event when a bonder is removed from whitelist
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -66,7 +66,7 @@ Description:
 
 # ChallengeResolved
 
-Description:
+Description: Event when a challenge is resolved
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -87,7 +87,7 @@ Description:
 
 # MultipleWithdrawalSettled
 
-Description:
+Description: Event when multiple bonded withdrawals are settled
 
 | Field             | Type         | Description |
 | ----------------- | ------------ | ----------- |
@@ -108,7 +108,7 @@ Description:
 
 # Stake
 
-Description:
+Description: Event when bonder stakes on bridge
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -128,7 +128,7 @@ Description:
 
 # TransferBondChallenged
 
-Description:
+Description: Event when bonded transfer root is challenged
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -149,7 +149,7 @@ Description:
 
 # TransferRootBonded
 
-Description:
+Description: event when transfer root is bonded
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -169,7 +169,7 @@ Description:
 
 # TransferRootConfirmed
 
-Description:
+Description: event when transfer root is confirmed on L1
 
 | Field              | Type         | Description |
 | ------------------ | ------------ | ----------- |
@@ -191,7 +191,7 @@ Description:
 
 # TransferRootSet
 
-Description:
+Description: Event when transfer root is set at the destination chain
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -211,7 +211,7 @@ Description:
 
 # TransferSentToL2
 
-Description:
+Description: Event when transfer is sent L1->L2
 
 | Field              | Type         | Description |
 | ------------------ | ------------ | ----------- |
@@ -237,7 +237,7 @@ Description:
 
 # Unstake
 
-Description:
+Description: Event when bonder unstakes on bridge
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -257,7 +257,7 @@ Description:
 
 # WithdrawalBondSettled
 
-Description:
+Description: Event when single bonded withdrawal is settled
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -278,7 +278,7 @@ Description:
 
 # WithdrawalBonded
 
-Description:
+Description: Event when transfer is bonded at the destination
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -298,7 +298,7 @@ Description:
 
 # Withdrew
 
-Description:
+Description: Event when transfer is withdrawn at the destination
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -320,7 +320,7 @@ Description:
 
 # Transfer
 
-Description:
+Description: Event when transfer is sent L2->L1 or L2->L2
 
 | Field            | Type         | Description |
 | ---------------- | ------------ | ----------- |
@@ -340,7 +340,7 @@ Description:
 
 # Tvl
 
-Description:
+Description: Total value locked
 
 | Field  | Type    | Description |
 | ------ | ------- | ----------- |
@@ -350,7 +350,7 @@ Description:
 
 # Volume
 
-Description:
+Description: Cumulative volume
 
 | Field       | Type    | Description |
 | ----------- | ------- | ----------- |
@@ -361,7 +361,7 @@ Description:
 
 # DailyVolume
 
-Description:
+Description: Daily volume
 
 | Field       | Type    | Description |
 | ----------- | ------- | ----------- |
@@ -373,7 +373,7 @@ Description:
 
 # Block
 
-Description:
+Description: Block entity
 
 | Field            | Type    | Description             |
 | ---------------- | ------- | ----------------------- |
@@ -395,7 +395,7 @@ Description:
 
 # Transaction
 
-Description:
+Description: Transaction entity
 
 | Field    | Type    | Description              |
 | -------- | ------- | ------------------------ |
@@ -411,7 +411,7 @@ Description:
 
 # Token
 
-Description:
+Description: Token entity
 
 | Field    | Type    | Description    |
 | -------- | ------- | -------------- |
