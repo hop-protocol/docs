@@ -24,7 +24,6 @@ Add to bottom of pam sshd file
 
 ```
 auth required pam_google_authenticator.so
-auth required pam_permit.so
 ```
 
 Comment `@include common-auth` so it looks like this
@@ -119,7 +118,6 @@ Comment these lines so it looks like this
 
 ```
 # auth required pam_google_authenticator.so
-# auth required pam_permit.so
 ```
 
 ### Edit sshd config
