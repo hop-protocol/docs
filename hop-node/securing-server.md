@@ -45,7 +45,7 @@ In `sshd_config` file, make sure to have the following settings:
 ```
 PasswordAuthentication no
 ChallengeResponseAuthentication no
-PermitRootLogin prohibit-password
+PermitRootLogin no
 PermitEmptyPasswords no
 ```
 
