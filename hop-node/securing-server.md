@@ -93,19 +93,21 @@ sudo apt update
 sudo apt install fail2ban -y
 ```
 
-Edit configuration file
+Create a local configuration file:
 
 ```bash
-sudo vim /etc/fail2ban/jail.conf
+sudo vim /etc/fail2ban/jail.local
 ```
 
-Make sure to have these settings in `jail.conf`
+Add the following config:
 
 ```
-ignoreip = 127.0.0.1/8 ::1
-
 [sshd]
 enabled = true
+port = <22 or your random port number>
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
 ```
 
 Restart services and show status
