@@ -93,13 +93,13 @@ sudo apt update
 sudo apt install fail2ban -y
 ```
 
-Create a local configuration file:
+Create a local configuration file
 
 ```bash
 sudo vim /etc/fail2ban/jail.local
 ```
 
-Add the following config:
+Add the following config
 
 ```
 [sshd]
