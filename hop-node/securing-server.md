@@ -8,6 +8,15 @@ These are some things you can do to secure an Ubuntu server.
 
 **These are examples and it's recommended that do your own research to know what's best for your own server.**
 
+### Update your system
+
+Keep the system up-to-date with the latest patches
+
+```bash
+sudo apt update -y && sudo apt full-upgrade -y
+sudo apt autoremove -y && sudo apt autoclean
+```
+
 ### Create new user instead of using default user
 
 Create a non-root user with sudo privileges
@@ -32,7 +41,7 @@ Delete default user
 sudo deluser --remove-home ubuntu
 ```
 
-### Disable SSH root login
+### Harden SSH config
 
 Edit SSH configuration
 
@@ -47,6 +56,7 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 PermitRootLogin no
 PermitEmptyPasswords no
+X11Forwarding no
 ```
 
 Verify changes and reload service

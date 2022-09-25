@@ -6,7 +6,7 @@ description: Set up SSH 2FA with google authenticator
 
 This article goes over installing google authenticator on an Ubuntu server to enable 2FA authentication when performing SSH
 
-Note: It's recommdend that you try setting up 2FA on a test server first, so you are not locked out of your server in case something goes wrong. It's also important to fully test the authentication before going live since a misconfiguration could leave your server less secure.
+Note: It's recommended that you try setting up 2FA on a test server first, so you are not locked out of your server in case something goes wrong. It's also important to fully test the authentication before going live since a misconfiguration could leave your server less secure.
 
 ## Install google authenticator
 
@@ -26,13 +26,6 @@ Add to bottom of pam sshd file
 auth required pam_google_authenticator.so
 ```
 
-Comment `@include common-auth` so it looks like this
-
-```
-# Standard Un*x authentication.
-# @include common-auth
-```
-
 ### Edit sshd config
 
 ```bash
@@ -49,7 +42,7 @@ UsePAM yes
 Add to bottom of `sshd_config` file
 
 ```bash
-AuthenticationMethods publickey,keyboard-interactive
+AuthenticationMethods publickey,keyboard-interactive:pam
 ```
 
 ### Restart SSH service
@@ -105,13 +98,6 @@ Do you want to enable rate-limiting: y
 
 ```bash
 sudo vim /etc/pam.d/sshd
-```
-
-Uncomment `@include common-auth` so it looks like this
-
-```
-# Standard Un*x authentication.
-@include common-auth
 ```
 
 Comment these lines so it looks like this
