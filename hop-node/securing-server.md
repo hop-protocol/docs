@@ -51,12 +51,18 @@ sudo vim /etc/ssh/sshd_config
 
 In `sshd_config` file, make sure to have the following settings:
 
-```
+```bash
 PasswordAuthentication no
 ChallengeResponseAuthentication no
 PermitRootLogin no
 PermitEmptyPasswords no
 X11Forwarding no
+```
+
+**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 thru 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
+
+```bash
+Port <port number>
 ```
 
 Verify changes and reload service
