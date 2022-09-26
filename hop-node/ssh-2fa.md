@@ -22,7 +22,7 @@ sudo vim /etc/pam.d/sshd
 
 Add to bottom of pam sshd file
 
-```
+``` bash
 auth required pam_google_authenticator.so
 ```
 
@@ -34,8 +34,8 @@ sudo vim /etc/ssh/sshd_config
 
 Make sure to have these settings enabled
 
-```
-ChallengeResponseAuthentication yes
+```bash
+ChallengeResponseAuthentication yes # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
 UsePAM yes
 ```
 
@@ -114,7 +114,7 @@ sudo vim /etc/ssh/sshd_config
 
 Change `AuthenticationMethods` to only allow `publickey`
 
-```
+```bash
 AuthenticationMethods publickey
 ```
 

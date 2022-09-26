@@ -53,7 +53,7 @@ In `sshd_config` file, make sure to have the following settings:
 
 ```bash
 PasswordAuthentication no
-ChallengeResponseAuthentication no
+ChallengeResponseAuthentication no # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
 PermitRootLogin no
 PermitEmptyPasswords no
 X11Forwarding no
