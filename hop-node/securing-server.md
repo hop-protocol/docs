@@ -38,7 +38,7 @@ sudo chown -R alice:alice .ssh
 Delete default user
 
 ```bash
-sudo deluser --remove-home ubuntu
+sudo userdel -r -f ubuntu
 ```
 
 ### Harden SSH config
