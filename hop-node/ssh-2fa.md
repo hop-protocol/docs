@@ -14,45 +14,6 @@ Note: It's recommended that you try setting up 2FA on a test server first, so yo
 sudo apt install libpam-google-authenticator -y
 ```
 
-### Edit pam config
-
-```bash
-sudo vim /etc/pam.d/sshd
-```
-
-Add to bottom of pam sshd file
-
-``` bash
-auth required pam_google_authenticator.so
-```
-
-### Edit sshd config
-
-```bash
-sudo vim /etc/ssh/sshd_config
-```
-
-Make sure to have these settings enabled
-
-```bash
-ChallengeResponseAuthentication yes # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
-UsePAM yes
-```
-
-Add to bottom of `sshd_config` file
-
-```bash
-AuthenticationMethods publickey,keyboard-interactive:pam
-```
-
-### Restart SSH service
-
-```bash
-sudo systemctl restart sshd.service
-```
-
-### Setup 2FA for user
-
 Run the `google-authenticator` command and follow the on-screen prompts
 
 ```bash
@@ -92,9 +53,45 @@ By default... < long story about time skew > ... Do you want to do so: n
 Do you want to enable rate-limiting: y
 ```
 
-## Disable google authenticator
+### Configure OpenSSH
 
-### Edit pam config
+```bash
+sudo vim /etc/pam.d/sshd
+```
+
+Add to bottom of pam sshd file
+
+``` bash
+auth required pam_google_authenticator.so
+```
+
+Update SSH
+
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+
+Make sure to have these settings enabled
+
+```bash
+ChallengeResponseAuthentication yes # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
+UsePAM yes
+```
+
+Add to bottom of `sshd_config` file
+
+```bash
+AuthenticationMethods publickey,keyboard-interactive:pam
+```
+
+Restart SSH service
+
+```bash
+sudo systemctl restart sshd.service
+```
+
+
+## Disable google authenticator
 
 ```bash
 sudo vim /etc/pam.d/sshd
@@ -106,7 +103,7 @@ Comment these lines so it looks like this
 # auth required pam_google_authenticator.so
 ```
 
-### Edit sshd config
+Update SSH
 
 ```bash
 sudo vim /etc/ssh/sshd_config
@@ -118,7 +115,7 @@ Change `AuthenticationMethods` to only allow `publickey`
 AuthenticationMethods publickey
 ```
 
-### Restart SSH service
+Restart SSH service
 
 ```bash
 sudo systemctl restart sshd.service

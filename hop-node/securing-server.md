@@ -144,8 +144,8 @@ systemctl start ufw.service
 systemctl enable ufw.service
 
 sudo ufw default deny
-sudo ufw allow "22/tcp" # allow SSH port
-sudo ufw disable # must disable and enable to apply changes
+sudo ufw allow "<22 or your random port number>/tcp" comment "Allow SSH"
+sudo ufw disable
 sudo ufw enable
 sudo ufw status
 ```
