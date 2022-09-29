@@ -35,9 +35,10 @@ sudo cp -r /home/ubuntu/.ssh .ssh
 sudo chown -R alice:alice .ssh
 ```
 
-Delete default user
+End your current session and SSH into the new user and delete default user
 
 ```bash
+pkill -u ubuntu
 sudo userdel -r -f ubuntu
 ```
 
@@ -59,7 +60,7 @@ ChallengeResponseAuthentication no # This has been replaced by KbdInteractiveAut
 X11Forwarding no
 ```
 
-**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 thru 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
+**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 through 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
 
 ```bash
 Port <port number>
