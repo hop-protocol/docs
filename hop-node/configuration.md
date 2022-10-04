@@ -86,7 +86,7 @@ _Note: The configuration requirements are evolving so documentation may not be u
     "bondWithdrawal": true,
     "commitTransfers": true,
     "settleBondedWithdrawals": true,
-    "xDomainMessageRelay": true,
+    "confirmRoots": true,
     "L1ToL2Relay": true
   },
   "commitTransfers": {
@@ -262,7 +262,7 @@ Watchers are like services in the Hop Node.
 | `bondWithdrawal`          | Bond withdrawals sent across chains         |
 | `commitTransfers`         | Commit transfers to create a transfer root  |
 | `settleBondedWithdrawals` | Settle individual transfers                 |
-| `xDomainMessageRelay`     | Exit transfer roots form their source chain |
+| `confirmRoots`            | Confirm transfer roots on L1                |
 | `L1ToL2Relay`             | Relay messages sent from L1 to L2           |
 
 They should all be enabled unless there's a specific reason not to enable certain watchers.
