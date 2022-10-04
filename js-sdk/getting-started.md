@@ -442,6 +442,24 @@ console.log(estimatedReceived.toString()) // 98866001
 
 The `estimatedReceived` value takes account the bonder fee and destination transaction fee.
 
+### Estimate amountOutMin
+
+Call this to estimate the minimum amount of tokens you should receive at the destination when including slippage.
+
+```javascript
+import { Hop, Chain } from '@hop-protocol/sdk'
+
+const hop = new Hop('mainnet')
+const bridge = hop.bridge('USDC')
+
+// get estimated min tokens out with slippage of 0.5% when sending 100 USDC Polygon -> Gnosis
+const data = await bridge.getSendData('10000000', 'polygon', 'gnosis')
+const { amountOut } = data
+const slippage = 0.5
+const amountOutMin = bridge.calcAmountOutMin(amountOut, slippage)
+console.log(amountOutMin.toString()) // 9935445
+```
+
 ### Estimate total bonder fee
 
 The total bonder fee is `bonderFee`+ `destinationTxFee`
