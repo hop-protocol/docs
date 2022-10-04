@@ -6,60 +6,13 @@ description: Set up SSH 2FA with google authenticator
 
 This article goes over installing google authenticator on an Ubuntu server to enable 2FA authentication when performing SSH
 
-Note: It's recommdend that you try setting up 2FA on a test server first, so you are not locked out of your server in case something goes wrong. It's also important to fully test the authentication before going live since a misconfiguration could leave your server less secure.
+Note: It's recommended that you try setting up 2FA on a test server first, so you are not locked out of your server in case something goes wrong. It's also important to fully test the authentication before going live since a misconfiguration could leave your server less secure.
 
 ## Install google authenticator
 
 ```bash
 sudo apt install libpam-google-authenticator -y
 ```
-
-### Edit pam config
-
-```bash
-sudo vim /etc/pam.d/sshd
-```
-
-Add to bottom of pam sshd file
-
-```
-auth required pam_google_authenticator.so
-auth required pam_permit.so
-```
-
-Comment `@include common-auth` so it looks like this
-
-```
-# Standard Un*x authentication.
-# @include common-auth
-```
-
-### Edit sshd config
-
-```bash
-sudo vim /etc/ssh/sshd_config
-```
-
-Make sure to have these settings enabled
-
-```
-ChallengeResponseAuthentication yes
-UsePAM yes
-```
-
-Add to bottom of `sshd_config` file
-
-```bash
-AuthenticationMethods publickey,keyboard-interactive
-```
-
-### Restart SSH service
-
-```bash
-sudo systemctl restart sshd.service
-```
-
-### Setup 2FA for user
 
 Run the `google-authenticator` command and follow the on-screen prompts
 
@@ -100,29 +53,57 @@ By default... < long story about time skew > ... Do you want to do so: n
 Do you want to enable rate-limiting: y
 ```
 
-## Disable google authenticator
-
-### Edit pam config
+### Configure OpenSSH
 
 ```bash
 sudo vim /etc/pam.d/sshd
 ```
 
-Uncomment `@include common-auth` so it looks like this
+Add to bottom of pam sshd file
 
+``` bash
+auth required pam_google_authenticator.so
 ```
-# Standard Un*x authentication.
-@include common-auth
+
+Update SSH
+
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+
+Make sure to have these settings enabled
+
+```bash
+ChallengeResponseAuthentication yes # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
+UsePAM yes
+```
+
+Add to bottom of `sshd_config` file
+
+```bash
+AuthenticationMethods publickey,keyboard-interactive:pam
+```
+
+Restart SSH service
+
+```bash
+sudo systemctl restart sshd.service
+```
+
+
+## Disable google authenticator
+
+```bash
+sudo vim /etc/pam.d/sshd
 ```
 
 Comment these lines so it looks like this
 
 ```
 # auth required pam_google_authenticator.so
-# auth required pam_permit.so
 ```
 
-### Edit sshd config
+Update SSH
 
 ```bash
 sudo vim /etc/ssh/sshd_config
@@ -130,11 +111,11 @@ sudo vim /etc/ssh/sshd_config
 
 Change `AuthenticationMethods` to only allow `publickey`
 
-```
+```bash
 AuthenticationMethods publickey
 ```
 
-### Restart SSH service
+Restart SSH service
 
 ```bash
 sudo systemctl restart sshd.service

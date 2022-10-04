@@ -8,6 +8,15 @@ These are some things you can do to secure an Ubuntu server.
 
 **These are examples and it's recommended that do your own research to know what's best for your own server.**
 
+### Update your system
+
+Keep the system up-to-date with the latest patches
+
+```bash
+sudo apt update -y && sudo apt full-upgrade -y
+sudo apt autoremove -y && sudo apt autoclean
+```
+
 ### Create new user instead of using default user
 
 Create a non-root user with sudo privileges
@@ -26,13 +35,14 @@ sudo cp -r /home/ubuntu/.ssh .ssh
 sudo chown -R alice:alice .ssh
 ```
 
-Delete default user
+End your current session and SSH into the new user and delete default user
 
 ```bash
-sudo deluser --remove-home ubuntu
+pkill -u ubuntu
+sudo userdel -r -f ubuntu
 ```
 
-### Disable SSH root login
+### Harden SSH config
 
 Edit SSH configuration
 
@@ -42,11 +52,18 @@ sudo vim /etc/ssh/sshd_config
 
 In `sshd_config` file, make sure to have the following settings:
 
-```
+```bash
+PermitRootLogin no
 PasswordAuthentication no
-ChallengeResponseAuthentication no
-PermitRootLogin prohibit-password
 PermitEmptyPasswords no
+ChallengeResponseAuthentication no # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
+X11Forwarding no
+```
+
+**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 through 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
+
+```bash
+Port <port number>
 ```
 
 Verify changes and reload service
@@ -93,19 +110,21 @@ sudo apt update
 sudo apt install fail2ban -y
 ```
 
-Edit configuration file
+Create a local configuration file
 
 ```bash
-sudo vim /etc/fail2ban/jail.conf
+sudo vim /etc/fail2ban/jail.local
 ```
 
-Make sure to have these settings in `jail.conf`
+Add the following config
 
 ```
-ignoreip = 127.0.0.1/8 ::1
-
 [sshd]
 enabled = true
+port = <22 or your random port number>
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
 ```
 
 Restart services and show status
@@ -126,8 +145,8 @@ systemctl start ufw.service
 systemctl enable ufw.service
 
 sudo ufw default deny
-sudo ufw allow "22/tcp" # allow SSH port
-sudo ufw disable # must disable and enable to apply changes
+sudo ufw allow "<22 or your random port number>/tcp" comment "Allow SSH"
+sudo ufw disable
 sudo ufw enable
 sudo ufw status
 ```

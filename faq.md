@@ -1,5 +1,5 @@
 ---
-description: Frequenty asked questions
+description: Frequently asked questions
 ---
 
 # FAQ
@@ -36,7 +36,7 @@ The AMM dynamically prices liquidity and incentivizes rebalancing liquidity on e
 
 ## What is a “bonder”?
 
-A bonder providers up-front liquidity on the destination rollup to allow instant transfers, and are incentivized by transfer fees.
+A bonder provides up-front liquidity on the destination rollup to allow instant transfers, and are incentivized by transfer fees.
 
 ## What does a transfer consist of?
 
@@ -92,11 +92,11 @@ The Bonder gets their collateral back on rollup B after they provide proof that 
 
 ## How are transfers aggregated and passed to other rollups?
 
-Transfers out of rollup A are merklelized into a "Transfer Root". The Transfer Root acts as proof that "hTokens" were burned on rollup A. The Transfer Root is sent to layer-1 (this takes \~1 week). After it's been commited on layer-1 then the Transfer Root is distributed to rollup B. At this point the Bonder can reclaim their collateral using the Transfer Root on rollup B as proof.
+Transfers out of rollup A are merklelized into a "Transfer Root". The Transfer Root acts as proof that "hTokens" were burned on rollup A. The Transfer Root is sent to layer-1 (this takes \~1 week). After it's been committed on layer-1 then the Transfer Root is distributed to rollup B. At this point the Bonder can reclaim their collateral using the Transfer Root on rollup B as proof.
 
 ## How do I become a Bonder?
 
-Currently Bonders must be allowed by the Hop Bridge smart contract governed by the Hop team. We are working on decentralizing the Bonder role completely. Reach out to the Hop team on discord if you are interested on becoming a Bonder.
+Currently Bonders must be allowed by the Hop Bridge smart contract governed by the Hop team. We are working on decentralizing the Bonder role completely. Reach out to the Hop team on discord if you are interested in becoming a Bonder.
 
 ## Do I need to expose any ports for the Hop Node?
 
