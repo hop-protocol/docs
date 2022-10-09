@@ -39,6 +39,8 @@ swapAndSend(
 )
 ```
 
+Note: **Do not set `destinationAmountOutMin` and `destinationAmountOutMin` when sending to L1 because there is no AMM on L1, otherwise the calculated transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
+
 ### L2 hTokens->L2 or L2 hTokens -> L1
 
 To send hTokens L2->L2 or hTokens L2->L1, call the `send` [method](https://github.com/hop-protocol/contracts/blob/8cefc3975115b6e3e706dd110670badad954a3bd/contracts/bridges/L2\_Bridge.sol#L117) on the L2 Bridge contract:
@@ -55,6 +57,8 @@ send(
 ```
 
 Note: There are no hTokens on L1 so sending L2 hUSDC to L1 means you'll receive USDC on L1.
+
+Note: **Do not set `amountOutMin` and `deadline` when sending to L1 because there is no AMM on L1, otherwise the calculated transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
 
 ### Sending ETH vs Token
 

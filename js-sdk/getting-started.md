@@ -292,6 +292,8 @@ console.log(tx.hash)
 
 Note: The `amountOutMin` will be `0` if one is not specified. You can use the result from `getSendData(...)` to calculate the estimated `amountOutMin` value.
 
+Note: Do not set `destinationAmountOutMin` and `destinationDeadline` when sending to L1. There is no AMM on L1 so these parameters should not be used, otherwise the calculated transferId will be invalid the transfer will be unbondable.
+
 #### Specify custom deadline
 
 ```javascript
@@ -309,7 +311,9 @@ const tx = await bridge.send('100000000', Chain.Polygon, Chain.Gnosis, {
 console.log(tx.hash)
 ```
 
-Note: a deadline will be 7 days if one is not specified. The `deadline` is required for L2->L1 transfers and L2->L2 transfers. Additionally, `destinationDeadline` is also required for L2->L1 transfers and L2->L2 transfers to swap the hTokens for the canonical tokens at the destination.
+Note: the deadline will be 7 days if one is not specified. The `deadline` is required for L2->L1 transfers and L2->L2 transfers for the AMM swap at the origin chain. Additionally, `destinationDeadline` is also required for L2->L2 transfers to swap the hTokens for the canonical tokens at the destination.
+
+Note: Do not set `destinationDeadline` and `destinationAmountOutMin` for L2->L1 since there is no L1 AMM at the destination.
 
 ### Get approval address for sending over bridge
 
@@ -459,6 +463,8 @@ const slippage = 0.5
 const amountOutMin = bridge.calcAmountOutMin(amountOut, slippage)
 console.log(amountOutMin.toString()) // 9935445
 ```
+
+Note: Do not set `destinationAmountOutMin` and `destinationDeadline` when sending to L1 because there's is no AMM on L1.
 
 ### Estimate total bonder fee
 
