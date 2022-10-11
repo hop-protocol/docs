@@ -2,7 +2,7 @@
 
 ## Hop logo
 
-![](.gitbook/assets/hop\_logo.png)
+![](https://assets.hop.exchange/logos/hop.png)
 
 ## [Hop icon logo PNG](https://s3.us-west-1.amazonaws.com/assets.hop.exchange/images/hop\_logo.png)[ ↗](https://s3.us-west-1.amazonaws.com/assets.hop.exchange/images/hop\_logo.png)
 
