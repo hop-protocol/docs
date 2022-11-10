@@ -4,33 +4,30 @@ description: Running Hop node on Kubernetes
 
 # Running on Kubernetes
 
-## This doc has exercise to deploy Hop/Bonder on testnet ( Goerli )
+## This doc has exercise to deploy USDC Hop/Bonder on testnet ( Goerli ).
+
+### Steps to follow
+
+- Create a KeyStore, follow this [doc](https://docs.hop.exchange/hop-node/keystore)
+
+- Create a `config.json` , follow [this](https://docs.hop.exchange/hop-node/configuration) config
+
+  - We will use `Goerli` Network
+
+- Make sure you have `Funds` in your wallet! with the amount you want to `Stake`
+
+  - You can mint Test USDC on Goerli using [this](https://goerli.etherscan.io/token/0x98339d8c260052b7ad81c28c16c0b98420f2b46a?a=0x9Dc99fAf98d363Ec0909D1f5C3627dDdEA2a85D4#writeContract) Contract! Connect your wallet and use mint function!
 
 
-- We will create a KeyStore, follow this [doc](https://docs.hop.exchange/hop-node/keystore)
-
-
-- Then we will create a `config.json`
-
-  You can just copy paste the given config or create your own
-
-  You can use [this](https://docs.hop.exchange/hop-node/configuration) config
-
-  We will use Goerli Network
-
-- Make sure you have `Funds` in your wallet! with the amount you want to `Stake`.
-
-  You can mint Test USDC on Goerli using [this](https://goerli.etherscan.io/token/0x98339d8c260052b7ad81c28c16c0b98420f2b46a?a=0x9Dc99fAf98d363Ec0909D1f5C3627dDdEA2a85D4#writeContract) Contract! Connect your wallet and use mint function!
-
-
-- Then we will modify the given k8s manifest files!
+- Modify the given k8s manifest files!
 
 ### Deployment.yaml
 
-```sh
+```bash
  nano deployment.yaml
 ```
-```
+
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -87,11 +84,11 @@ spec:
 
 ### Configmap.yaml
 
-```sh
+```bash
 nano cm.yaml
 ```
 
-```
+```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -232,11 +229,11 @@ Note: Please change the required data on above config example!!
 
 ### Secret.yaml
 
-```sh
+```bash
 nano secret.yaml
 ```
 
-```
+```yaml
 apiVersion: v1
 data:
   keystorepass: ## output of `echo -n "YourKeystorePassphrase" | base64`
@@ -250,11 +247,11 @@ type: Opaque
 
 ### Volume.yaml
 
-```sh
+```bash
 nano volume.yaml
 ```
 
-```
+```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -273,32 +270,53 @@ spec:
 
 - Then we will use the `Staking` commands to stake the funds!
 
-  Follow this [commands](https://docs.hop.exchange/hop-node/staking) 
-
   Ignore the `Ethereum` in first command (it will pick the goerli network from the config)
 
   Understand that staking is one time procedure, so we will run this command in standalone container and once we are done, we will run actual `Deployment` with the help of `Kubernetes`
 
-  We need to use the config for this, so please create a temporary dir named `hop-node` and `tmp` and place your `config.json` in `hop-node` and `keystore.json` in `tmp` for a while, also don't forget to create `test.env` containing `KEYSTORE_PASS`
+  We need to use the config for this, so please create a temporary dir named `hop-node` and place your `config.json` in it also create `tmp` and place  `keystore.json` in it for a while!
+
+  - I hop (pun intendent) your directory structure looks like below
+
+    ```
+    project
+    └───hop-node
+    │   |- config.json
+    |
+    └───tmp
+    |   |- keystore.json
+    │       
+    └───k8s
+        │- cm.yaml
+        │- Deployment.yaml
+        │- secret.yaml
+        │- volume.yaml
+
+    ```
+
+
+  Follow this [commands](https://docs.hop.exchange/hop-node/staking) 
+
+  OR these 
 
   ```
-  docker run --env-file test.env -it -v ./hop-node:/root -v ./tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=ethereum --token=USDC --amount=500000
+  docker run -it -v $PWD/hop-node:/root -v $PWD/tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=ethereum --token=USDC --amount=500000
 
-  docker run --env-file test.env -it -v ./hop-node:/root -v ./tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=polygon --token=USDC --amount=100000 --skip-send-to-l2
+  docker run -it -v $PWD/hop-node:/root -v $PWD/tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=polygon --token=USDC --amount=100000 
 
-  docker run --env-file test.env -it -v ./hop-node:/root -v ./tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=optimism --token=USDC --amount=100000 --skip-send-to-l2
+  docker run -it -v $PWD/hop-node:/root -v $PWD/tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=optimism --token=USDC --amount=100000 
 
-  docker run --env-file test.env -it -v ./hop-node:/root -v ./tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=arbitrum --token=USDC --amount=100000 --skip-send-to-l2
+  docker run -it -v $PWD/hop-node:/root -v $PWD/tmp:/tmp hopprotocol/hop-node:mainnet stake --config=/root/config.json --chain=arbitrum --token=USDC --amount=100000
 
   ```
   
   You can stop the container once the staking is done!
 
-- Then you can run actual `kubernetes deployment`  
+- Run actual `kubernetes deployment`  
 
   ```kubectl create ns hop```
 
-  We will deploy it using `kubectl apply -f ./` 
+  We will deploy it using `kubectl apply -f ./k8s/` 
 
 - Watch out logs!
 
