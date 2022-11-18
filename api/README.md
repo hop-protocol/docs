@@ -127,4 +127,4 @@ The API server source code is [available on github](https://github.com/hop-proto
 
 ## Additional endpoints
 
-If you're looking for a complete API to compose bridge transfer transactions, checking approvals, and more; check out this self hosted server [example on github](https://github.com/hop-protocol/hop/tree/develop/packages/sdk-api-demo).
+If you're looking for a complete API to compose bridge transfer transactions, checking approvals, and more; check out this self hosted server [example on github](https://github.com/hop-protocol/hop/tree/develop/packages/sdk-api-example).
