@@ -10,6 +10,16 @@ description: API examples
 
 > Get estimated bonder fee to use for transfers
 
+Input query parameters:
+
+| Parameters  | Description                  |
+| ----------- | ---------------------------- |
+| `amount`    | Amount in smallest use (eg. 1000000 which is 1 USDC) |
+| `token`     | Token symbol (eg. USDC) |
+| `fromChain` | From chain slug (eg. optimism) |
+| `toChain`   | To chain slug (eg. polygon) |
+| `slippage`  | Slippage percentage (eg. 0.5 which is 0.5%) |
+
 Example request
 
 ```sh
@@ -27,9 +37,24 @@ Example response
 }
 ```
 
+Output response:
+
+| Parameters  | Description                  |
+| ----------- | ---------------------------- |
+| `amountIn`  | Amount in |
+| `amountOutMin` | The minimum amount out to receive from AMM taking account AMM fees and slippage |
+| `bonderFee` | The suggested bonder fee for the amount in |
+| `estimatedReceived` | The estimated amount you'll receive at the destination taking account all fees and slippage |
+
 ## GET /v1/transfer-status
 
 > Get transfer status for tx
+
+Input query parameters:
+
+| Parameters  | Description                  |
+| ----------- | ---------------------------- |
+| `transferId`  | Transfer ID or origin transfer transaction hash |
 
 Example request
 
@@ -64,3 +89,27 @@ Example response
   ...
 }
 ```
+
+Output response:
+
+| Parameters  | Description                  |
+| ----------- | ---------------------------- |
+| `transferId`  | Transfer ID |
+| `transactionHash`  | Origin transaction hash |
+| `sourceChainId`  | Chain ID of origin chain |
+| `sourceChainSlug`  | Chain slug of origin chain |
+| `destinationChainId`  | Chain ID of destination chain |
+| `destinationChainSlug`  | Chain slug of destination chain |
+| `accountAddress`  | Address of transfer originator |
+| `amount`  | Original amount transferred in smallest unit (eg. wei) |
+| `amountFormatted`  | Original amount transferred in human readable format |
+| `amountUsd`  | Original amount transferred in USD |
+| `deadline`  | Deadline timestamp specified in transfer |
+| `recipientAddress`  | Address of recipient set for transfer |
+| `bonderFee`  | The bonder fee amount specified in transfer in smallest unit in terms of token transferred (eg. wei) |
+| `bonderFeeFormatted`  | The bonder fee amount specified in transfer in human readable format |
+| `bonded`  | True if this transfer has been bonded (received) at the destination. Will be false if the transfer is still pending or is unbondable |
+| `bondTransactionHash` | Bond (received) destination transaction hash |
+| `bonderAddress`  | Address of bonder for this transfer |
+| `token` | Token symbol of asset bridged |
+| `timestamp` | Unix timestamp of origin transfer transaction |
