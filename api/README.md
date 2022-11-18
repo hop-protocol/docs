@@ -4,6 +4,8 @@ description: API examples
 
 # API
 
+> This API is a simple wrapper around the SDK offered for convenience on getting estimated bonder fee and transfer status.
+
 ## Endpoints
 
 ## GET /v1/quote
@@ -14,11 +16,11 @@ Input query parameters:
 
 | Parameters  | Description                  |
 | ----------- | ---------------------------- |
-| `amount`    | Amount in smallest use (eg. 1000000 which is 1 USDC) |
-| `token`     | Token symbol (eg. USDC) |
-| `fromChain` | From chain slug (eg. optimism) |
-| `toChain`   | To chain slug (eg. polygon) |
-| `slippage`  | Slippage percentage (eg. 0.5 which is 0.5%) |
+| `amount`    | (required) Amount in smallest use (eg. 1000000 which is 1 USDC) |
+| `token`     | (required) Token symbol (eg. USDC) |
+| `fromChain` | (required) From chain slug (eg. optimism) |
+| `toChain`   | (required) To chain slug (eg. polygon) |
+| `slippage`  | (required) Slippage percentage (eg. 0.5 which is 0.5%) |
 
 Example request
 
@@ -31,6 +33,7 @@ Example response
 ```json
 {
   "amountIn": "1000000",
+  "slippage": "0.5",
   "amountOutMin": "994836",
   "bonderFee": "250613",
   "estimatedRecieved": "749223"
@@ -41,7 +44,8 @@ Output response:
 
 | Parameters  | Description                  |
 | ----------- | ---------------------------- |
-| `amountIn`  | Amount in |
+| `amountIn`  | Specified amount in |
+| `slippage`  | Specified slippage |
 | `amountOutMin` | The minimum amount out to receive from AMM taking account AMM fees and slippage |
 | `bonderFee` | The suggested bonder fee for the amount in |
 | `estimatedReceived` | The estimated amount you'll receive at the destination taking account all fees and slippage |
@@ -54,7 +58,10 @@ Input query parameters:
 
 | Parameters  | Description                  |
 | ----------- | ---------------------------- |
-| `transferId`  | Transfer ID or origin transfer transaction hash |
+| `transferId`  | (optional\*) Transfer ID |
+| `transferHash`  | (optional\*) Origin transfer transaction hash |
+
+\* Must use at lease one option, either transferId or transactionHash.
 
 Example request
 
@@ -113,3 +120,11 @@ Output response:
 | `bonderAddress`  | Address of bonder for this transfer |
 | `token` | Token symbol of asset bridged |
 | `timestamp` | Unix timestamp of origin transfer transaction |
+
+## Source code
+
+The API server source code is [available on github](https://github.com/hop-protocol/hop/tree/develop/packages/api).
+
+## Additional endpoints
+
+If you're looking for a complete API to compose bridge transfer transactions, checking approvals, and more; check out this self hosted server [example on github](https://github.com/hop-protocol/hop/tree/develop/packages/sdk-api-demo).
