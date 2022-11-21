@@ -66,7 +66,7 @@ Input query parameters:
 Example request
 
 ```sh
-curl "https://api.hop.exchange/v1/transfer-status?transferId=0x5a15b2abd4d0f2e5d0ea3d5fc93758374b14940096487d70f7c95b5393fc9c89"
+curl "https://api.hop.exchange/v1/transfer-status?transactionHash=0xbe6953dac8149e3f4d3a5719445170fb9835c461a980cbdaf9ad5cce10c9d27c"
 ```
 
 Example response
@@ -83,6 +83,7 @@ Example response
   "amount": "2996498",
   "amountFormatted": 2.996498,
   "amountUsd": 3.004011668430896,
+  "amountOutMin": "2503144",
   "deadline": 1662159408,
   "recipientAddress": "0xd813a52b1158fc08f69ba52ca72ca4360e255ba3",
   "bonderFee": "479123",
@@ -92,8 +93,7 @@ Example response
   "bondTransactionHash": "0x659225113a0711d73bd576d2edb916b1031d4fb3e422a08ee8e0f863c4fb5af7",
   "bonderAddress": "0xa6a688f107851131f0e1dce493ebbebfaf99203e",
   "token": "USDC",
-  "timestamp": 1661554612,
-  ...
+  "timestamp": 1661554612
 }
 ```
 
@@ -111,6 +111,7 @@ Output response:
 | `amount`  | Original amount transferred in smallest unit (eg. wei) |
 | `amountFormatted`  | Original amount transferred in human readable format |
 | `amountUsd`  | Original amount transferred in USD |
+| `amountOutMin`  | The minimum amount out specified for AMM swap |
 | `deadline`  | Deadline timestamp specified in transfer |
 | `recipientAddress`  | Address of recipient set for transfer |
 | `bonderFee`  | The bonder fee amount specified in transfer in smallest unit in terms of token transferred (eg. wei) |
