@@ -126,30 +126,12 @@ Gnosis Chain is not supported on Goerli
 
 ### Optimism
 
-Optimism is not supported on Goerli
+| URL                          |
+| ---------------------------- |
+| `https://goerli.optimism.io` |
 
 ### Arbitrum
 
-Arbitrum is not supported on Arbitrum
-
-## Rinkeby
-
-### Ethereum
-
-Hop is not supported on Rinkeby
-
-### Polygon
-
-Hop is not supported on Rinkeby
-
-### Gnosis Chain (formerly xDai)
-
-Hop is not supported on Rinkeby
-
-### Optimism
-
-Hop is not supported on Rinkeby
-
-### Arbitrum
-
-Hop is not supported on Rinkeby
+| URL                            |
+| ------------------------------ |
+| `https://arb1.arbitrum.io/rpc` |
