@@ -39,7 +39,7 @@ swapAndSend(
 )
 ```
 
-Note: **Do not set `destinationAmountOutMin` and `destinationAmountOutMin` when sending to L1 because there is no AMM on L1, otherwise the calculated transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
+Note: **Do not set `destinationAmountOutMin` and `destinationDeadline` when sending to L1 because there is no AMM on L1, otherwise the calculated transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
 
 ### L2 hTokens->L2 or L2 hTokens -> L1
 
@@ -86,4 +86,20 @@ The L1 Bridge addresses, L2 Bridge addresses, L2 AMM wrapper addresses, and othe
 
 {% content-ref url="../contract-addresses.md" %}
 [contract-addresses.md](../contract-addresses.md)
+{% endcontent-ref %}
+
+### Calcuating Bonder Fee
+
+There's a REST API you can use to get estimated bonder fee. See [API docs](../api/README.md).
+
+{% content-ref url="../api/README.md" %}
+[README.md](../api/README.md)
+{% endcontent-ref %}
+
+### Getting transfer status
+
+There's a REST API you can use to get transfer status. See [API docs](../api/README.md).
+
+{% content-ref url="../api/README.md" %}
+[README.md](../api/README.md)
 {% endcontent-ref %}

@@ -4,6 +4,7 @@
 * [JS SDK](js-sdk/README.md)
   * [Getting started](js-sdk/getting-started.md)
   * [API Reference](js-sdk/api-reference.md)
+* [API](api/README.md)
 * [Hop Node](hop-node/README.md)
   * [Getting started](hop-node/getting-started.md)
   * [Requirements](hop-node/requirements.md)

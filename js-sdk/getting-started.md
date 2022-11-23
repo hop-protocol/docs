@@ -591,6 +591,27 @@ console.log(`${impactPercent}%`) // 0.0489%
 
 Depositing underpooled assets will give you bonus LP tokens. Depositing overpooled assets will give you less LP tokens (shown as negative price impact).
 
+### Get transfer status
+
+```javascript
+import { Hop } from '@hop-protocol/sdk'
+
+const hop = new Hop('mainnet')
+const bridge = hop.bridge('USDC')
+const sourceTxHash = '0x198cf61a0dfa6d86e9b3b2b92a10df33acd8a4b722c8d670b8c94638d590d3c5180'
+const status = await bridge.getTransferStatus(sourceTxHash)
+console.log(status)
+/*
+{
+  "transferId": "0x198cf61a0dfa6d86e9b3b2b92a10df33acd8a4b722c8d670b8c94638d590d3c5180"
+  "sourceChainSlug": "ethereum",
+  "destinationChainSlug": "optimism",
+  "bonded": true
+  ...
+}
+*/
+```
+
 ### Watch for receipt events
 
 ```javascript

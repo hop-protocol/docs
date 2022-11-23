@@ -24,6 +24,8 @@ Chain ID: `1`
 | --------------------------------------------------------------- |
 | `https://mainnet.infura.io/v3/84842078b09946638c03157f83405213` |
 | `https://cloudflare-eth.com`                                    |
+| `https://rpc.ankr.com/eth`                                      |
+| `https://1rpc.io/eth`                                           |
 
 ### Polygon
 
@@ -35,6 +37,8 @@ Chain ID: `137`
 | `https://rpc-mainnet.matic.network`      |
 | `https://rpc-mainnet.maticvigil.com`     |
 | `https://rpc-mainnet.matic.quiknode.pro` |
+| `https://rpc.ankr.com/polygon`           |
+| `https://1rpc.io/matic`                  |
 
 ### Gnosis Chain (formerly xDai)
 
@@ -52,9 +56,11 @@ Chain ID: `100`
 
 Chain ID: `10`
 
-| URL                           |
-| ----------------------------- |
-| `https://mainnet.optimism.io` |
+| URL                            |
+| ------------------------------ |
+| `https://mainnet.optimism.io`  |
+| `https://rpc.ankr.com/optimism`|
+| `https://1rpc.io/op`           |
 
 Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
@@ -62,9 +68,11 @@ Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of t
 
 Chain ID: `42161`
 
-| URL                            |
-| ------------------------------ |
-| `https://arb1.arbitrum.io/rpc` |
+| URL                             |
+| ------------------------------- |
+| `https://arb1.arbitrum.io/rpc`  |
+| `https://rpc.ankr.com/arbitrum` |
+| `https://1rpc.io/arb`           |
 
 Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
