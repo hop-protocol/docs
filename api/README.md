@@ -14,17 +14,17 @@ description: API examples
 
 Input query parameters:
 
-| Parameters  | Description                  |
-| ----------- | ---------------------------- |
+| Parameters  | Description                                                     |
+| ----------- | --------------------------------------------------------------- |
 | `amount`    | (required) Amount in smallest use (eg. 1000000 which is 1 USDC) |
-| `token`     | (required) Token symbol (eg. USDC) |
-| `fromChain` | (required) From chain slug (eg. optimism) |
-| `toChain`   | (required) To chain slug (eg. polygon) |
-| `slippage`  | (required) Slippage percentage (eg. 0.5 which is 0.5%) |
+| `token`     | (required) Token symbol (eg. USDC)                              |
+| `fromChain` | (required) From chain slug (eg. optimism)                       |
+| `toChain`   | (required) To chain slug (eg. polygon)                          |
+| `slippage`  | (required) Slippage percentage (eg. 0.5 which is 0.5%)          |
 
 Example request
 
-```sh
+```bash
 curl "https://api.hop.exchange/v1/quote?amount=1000000&token=USDC&fromChain=polygon&toChain=gnosis&slippage=0.5"
 ```
 
@@ -42,12 +42,12 @@ Example response
 
 Output response:
 
-| Parameters  | Description                  |
-| ----------- | ---------------------------- |
-| `amountIn`  | Specified amount in |
-| `slippage`  | Specified slippage |
-| `amountOutMin` | The minimum amount out to receive from AMM taking account AMM fees and slippage |
-| `bonderFee` | The suggested bonder fee for the amount in |
+| Parameters          | Description                                                                                 |
+| ------------------- | ------------------------------------------------------------------------------------------- |
+| `amountIn`          | Specified amount in                                                                         |
+| `slippage`          | Specified slippage                                                                          |
+| `amountOutMin`      | The minimum amount out to receive from AMM taking account AMM fees and slippage             |
+| `bonderFee`         | The suggested bonder fee for the amount in                                                  |
 | `estimatedReceived` | The estimated amount you'll receive at the destination taking account all fees and slippage |
 
 ## GET /v1/transfer-status
@@ -56,16 +56,16 @@ Output response:
 
 Input query parameters:
 
-| Parameters  | Description                  |
-| ----------- | ---------------------------- |
-| `transferId`  | (optional\*) Transfer ID |
-| `transferHash`  | (optional\*) Origin transfer transaction hash |
+| Parameters     | Description                                   |
+| -------------- | --------------------------------------------- |
+| `transferHash` | (optional\*) Origin transfer transaction hash |
+| `transferId`   | (optional\*) Transfer ID                      |
 
-\* Must use at lease one option, either transferId or transactionHash.
+\* Must use at lease one option, either `transactionHash` or `transferId`.
 
 Example request
 
-```sh
+```
 curl "https://api.hop.exchange/v1/transfer-status?transactionHash=0xbe6953dac8149e3f4d3a5719445170fb9835c461a980cbdaf9ad5cce10c9d27c"
 ```
 
@@ -99,28 +99,28 @@ Example response
 
 Output response:
 
-| Parameters  | Description                  |
-| ----------- | ---------------------------- |
-| `transferId`  | Transfer ID |
-| `transactionHash`  | Origin transaction hash |
-| `sourceChainId`  | Chain ID of origin chain |
-| `sourceChainSlug`  | Chain slug of origin chain |
-| `destinationChainId`  | Chain ID of destination chain |
-| `destinationChainSlug`  | Chain slug of destination chain |
-| `accountAddress`  | Address of transfer originator |
-| `amount`  | Original amount transferred in smallest unit (eg. wei) |
-| `amountFormatted`  | Original amount transferred in human readable format |
-| `amountUsd`  | Original amount transferred in USD |
-| `amountOutMin`  | The minimum amount out specified for AMM swap |
-| `deadline`  | Deadline timestamp specified in transfer |
-| `recipientAddress`  | Address of recipient set for transfer |
-| `bonderFee`  | The bonder fee amount specified in transfer in smallest unit in terms of token transferred (eg. wei) |
-| `bonderFeeFormatted`  | The bonder fee amount specified in transfer in human readable format |
-| `bonded`  | True if this transfer has been bonded (received) at the destination. Will be false if the transfer is still pending or is unbondable |
-| `bondTransactionHash` | Bond (received) destination transaction hash |
-| `bonderAddress`  | Address of bonder for this transfer |
-| `token` | Token symbol of asset bridged |
-| `timestamp` | Unix timestamp of origin transfer transaction |
+| Parameters             | Description                                                                                                                          |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `transferId`           | Transfer ID                                                                                                                          |
+| `transactionHash`      | Origin transaction hash                                                                                                              |
+| `sourceChainId`        | Chain ID of origin chain                                                                                                             |
+| `sourceChainSlug`      | Chain slug of origin chain                                                                                                           |
+| `destinationChainId`   | Chain ID of destination chain                                                                                                        |
+| `destinationChainSlug` | Chain slug of destination chain                                                                                                      |
+| `accountAddress`       | Address of transfer originator                                                                                                       |
+| `amount`               | Original amount transferred in smallest unit (eg. wei)                                                                               |
+| `amountFormatted`      | Original amount transferred in human readable format                                                                                 |
+| `amountUsd`            | Original amount transferred in USD                                                                                                   |
+| `amountOutMin`         | The minimum amount out specified for AMM swap                                                                                        |
+| `deadline`             | Deadline timestamp specified in transfer                                                                                             |
+| `recipientAddress`     | Address of recipient set for transfer                                                                                                |
+| `bonderFee`            | The bonder fee amount specified in transfer in smallest unit in terms of token transferred (eg. wei)                                 |
+| `bonderFeeFormatted`   | The bonder fee amount specified in transfer in human readable format                                                                 |
+| `bonded`               | True if this transfer has been bonded (received) at the destination. Will be false if the transfer is still pending or is unbondable |
+| `bondTransactionHash`  | Bond (received) destination transaction hash                                                                                         |
+| `bonderAddress`        | Address of bonder for this transfer                                                                                                  |
+| `token`                | Token symbol of asset bridged                                                                                                        |
+| `timestamp`            | Unix timestamp of origin transfer transaction                                                                                        |
 
 ## Source code
 
