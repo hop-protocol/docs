@@ -6,6 +6,8 @@ description: API examples
 
 > This API is a simple wrapper around the SDK offered for convenience on getting estimated bonder fee and transfer status.
 
+Note: Only mainnet is supported.
+
 ## Endpoints
 
 ## GET /v1/quote
@@ -121,6 +123,28 @@ Output response:
 | `bonderAddress`        | Address of bonder for this transfer                                                                                                  |
 | `token`                | Token symbol of asset bridged                                                                                                        |
 | `timestamp`            | Unix timestamp of origin transfer transaction                                                                                        |
+
+## Using custom RPC providers
+
+You can set query parameter to specify what RPC url to use for a chain.
+
+By default, public RPC urls are used, which are subject to rate limits. You can get better performance by specifying your own custom provider instead.
+
+Input query parameters:
+
+| Parameters  | Description                                                     |
+| ----------- | --------------------------------------------------------------- |
+| `rpcUrl[ethereum]` | (optional) Ethereum RPC url (eg. rpcUrl[ethereum]=https://mainnet.infura.io/v3/84842078b09946638c03157f83405213) |
+| `rpcUrl[optimism]` | (optional) Optimism RPC url (eg. rpcUrl[optimism]=https://mainnet.optimism.io) |
+| `rpcUrl[arbitrum]` | (optional) Arbitrum RPC url (eg. rpcUrl[arbitrum]=https://arb1.arbitrum.io/rpc) |
+| `rpcUrl[polygon]` | (optional) Polygon RPC url (eg. rpcUrl[polygon]=https://polygon-rpc.com) |
+| `rpcUrl[gnosis]` | (optional) Gnosis Chain RPC url (eg. rpcUrl[gnosis]=https://rpc.gnosischain.com) |
+
+Example request
+
+```bash
+curl -g "https://api.hop.exchange/v1/quote?amount=1000000&token=USDC&fromChain=polygon&toChain=gnosis&slippage=0.5&rpcUrl[polygon]=https://polygon-rpc.com&rpcUrl[gnosis]=https://rpc.gnosischain.com"
+```
 
 ## Source code
 
