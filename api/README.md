@@ -6,6 +6,8 @@ description: API examples
 
 > This API is a simple wrapper around the SDK offered for convenience on getting estimated bonder fee and transfer status.
 
+Although this API is offered as a free service, it's recommended to host your own API server ([see docs here](https://github.com/hop-protocol/hop/tree/develop/packages/api)) to not have any rate limit restrictions.
+
 Note: Only mainnet is supported.
 
 ## Endpoints
