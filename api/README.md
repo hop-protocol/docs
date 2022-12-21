@@ -8,8 +8,6 @@ description: API examples
 
 Although this API is offered as a free service, it's recommended to host your own API server ([see docs here](https://github.com/hop-protocol/hop/tree/develop/packages/api)) to not have any rate limit restrictions.
 
-Note: Only mainnet is supported.
-
 ## Endpoints
 
 ## GET /v1/quote
@@ -20,11 +18,14 @@ Input query parameters:
 
 | Parameters  | Description                                                     |
 | ----------- | --------------------------------------------------------------- |
-| `amount`    | (required) Amount in smallest use (eg. 1000000 which is 1 USDC) |
-| `token`     | (required) Token symbol (eg. USDC)                              |
-| `fromChain` | (required) From chain slug (eg. optimism)                       |
-| `toChain`   | (required) To chain slug (eg. polygon)                          |
-| `slippage`  | (required) Slippage percentage (eg. 0.5 which is 0.5%)          |
+| `amount`    | (required) Amount in smallest use (eg. `amount=1000000` which is 1 USDC)    |
+| `token`     | (required) Token symbol (eg. `token=USDC`)                                  |
+| `fromChain` | (required) From chain slug (eg. `fromChain=optimism`)                       |
+| `toChain`   | (required) To chain slug (eg. `toChain=polygon`)                            |
+| `slippage`  | (required) Slippage percentage (eg. `slippage=0.5` which is 0.5%)           |
+| `network`  | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet (eg. `network=goerli`) |
+
+Chain options are: `ethereum`, `optimism`, `arbitrum`, `polygon`, `gnosis`
 
 Example request
 
@@ -64,6 +65,7 @@ Input query parameters:
 | -------------- | --------------------------------------------- |
 | `transferHash` | (optional\*) Origin transfer transaction hash |
 | `transferId`   | (optional\*) Transfer ID                      |
+| `network`  | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet |
 
 \* Must use at lease one option, either `transactionHash` or `transferId`.
 
