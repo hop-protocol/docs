@@ -39,7 +39,7 @@ swapAndSend(
 )
 ```
 
-Note: **Do not set `destinationAmountOutMin` and `destinationDeadline` when sending to L1 because there is no AMM on L1, otherwise the calculated transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
+Note: **Do not set `destinationAmountOutMin` and `destinationDeadline` when sending to L1 because there is no AMM on L1, otherwise the computed transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
 
 ### L2 hTokens->L2 or L2 hTokens -> L1
 
@@ -58,7 +58,7 @@ send(
 
 Note: There are no hTokens on L1 so sending L2 hUSDC to L1 means you'll receive USDC on L1.
 
-Note: **Do not set `amountOutMin` and `deadline` when sending to L1 because there is no AMM on L1, otherwise the calculated transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
+Note: **Do not set `amountOutMin` and `deadline` when sending to L1 because there is no AMM on L1, otherwise the computed transferId will be invalid and the transfer will be unbondable.** These parameters should be set to `0` when sending to L1.
 
 ### Sending ETH vs Token
 

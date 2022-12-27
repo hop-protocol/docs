@@ -114,7 +114,15 @@ It is not a requirement to run your own RPC server on chain supported chain. You
 
 You can withdraw any unbonded transfers on [Withdraw](https://app.hop.exchange/withdraw) page
 
-[https://app.hop.exchange/withdraw](https://app.hop.exchange/#/withdraw?token=ETH)
+[https://app.hop.exchange/withdraw](https://app.hop.exchange/#/withdraw)
+
+## How can I rescue a transfer to L1 Ethereum where I accidentally set the `amountOutMin` or `deadline` parameters?
+
+Since there is no AMM on L1 Ethereum, then any transfers with `amountOutMin` or `deadline` parameters with values other than `0` will result an invalid transferId and the bonder will not be able to bonded.
+
+You'll have to wait until the Transfer Root gets committed for that route in order to manually withdraw it on the Hop [Withdraw page](https://app.hop.exchange/withdraw).
+
+[https://app.hop.exchange/withdraw](https://app.hop.exchange/#/withdraw)
 
 ## How does Hop Protocol make money?
 
