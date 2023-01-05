@@ -58,9 +58,10 @@ Chain ID: `10`
 
 | URL                            |
 | ------------------------------ |
-| `https://mainnet.optimism.io`  |
 | `https://rpc.ankr.com/optimism`|
 | `https://1rpc.io/op`           |
+| `https://optimism-mainnet.infura.io/v3/84842078b09946638c03157f83405213` |
+| `https://mainnet.optimism.io` (not reliable due to rate limits) |
 
 Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
