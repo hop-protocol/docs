@@ -46,7 +46,8 @@ Chain ID: `100`
 
 | URL                                            |
 | ---------------------------------------------- |
-| `https://rpc.gnosischain.com` (recommended)    |
+| `https://rpc.gnosis.gateway.fm` (recommended)  |
+| `https://rpc.gnosischain.com`                  |
 | `https://xdai-archive.blockscout.com`          |
 | `https://rpc.ankr.com/gnosis`                  |
 | `https://gnosischain-rpc.gateway.pokt.network` |
