@@ -54,7 +54,7 @@ import { Hop } from '@hop-protocol/sdk'
 const hop = new Hop('mainnet')
 ```
 
-Supported network is only `mainnet`at the moment.
+Supported networks are `mainnet` and `goerli`, however the assets and chains available on [goerli](https://goerli.hop.exchange) is limitted.
 
 #### Instantiate with ethers Signer for sending transactions:
 
