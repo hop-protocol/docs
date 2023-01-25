@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the Hop Developer documentation!
+Welcome to the Hop v1 Developer documentation!
 
 {% content-ref url="js-sdk/" %}
 [js-sdk](js-sdk/)
