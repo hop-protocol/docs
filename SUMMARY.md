@@ -54,9 +54,9 @@
 
 * [Fee Calculation](fee-calculation.md)
 
-***
+## RPC
 
-* [RPC Endpoints](rpc-endpoints.md)
+* [RPC Endpoints](rpc/rpc-endpoints.md)
 
 ## Other
 
