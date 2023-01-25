@@ -152,8 +152,7 @@ Hop went [live](https://twitter.com/HopProtocol/status/1414624873775878148?s=20)
 ## Where can I try Hop?
 
 * Mainnet: [https://app.hop.exchange](https://app.hop.exchange/)
-* Kovan: [https://kovan.hop.exchange](https://kovan.hop.exchange) (unmaintained now)
-* Goerli: [https://goerli.hop.exchange](https://goerli.hop.exchange) (unmaintained now)
+* Goerli: [https://goerli.hop.exchange](https://goerli.hop.exchange)
 
 ## Where can I get xDai for transaction fees (faucet)?
 
@@ -197,7 +196,6 @@ If you'd like to contribute, talk to us on [Discord](https://discord.gg/PwCF88em
 * [https://explorer.hop.exchange/](https://explorer.hop.exchange/mainnet/)
 * [https://app.hop.exchange/stats](https://app.hop.exchange/stats?token=USDC)
 * [https://volume.hop.exchange/](https://volume.hop.exchange/)
-* [https://tvl.hop.exchange/](https://tvl.hop.exchange/)
 
 ## How can I can track my positions?
 
