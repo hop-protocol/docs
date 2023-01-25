@@ -256,14 +256,14 @@ Configure options for keystore:
 
 Watchers are like services in the Hop Node.
 
-| Watcher                   | Description                                 |
-| ------------------------- | ------------------------------------------- |
-| `bondTransferRoot`        | Bond transfer roots leaving ORUs            |
-| `bondWithdrawal`          | Bond withdrawals sent across chains         |
-| `commitTransfers`         | Commit transfers to create a transfer root  |
-| `settleBondedWithdrawals` | Settle individual transfers                 |
-| `confirmRoots`            | Confirm transfer roots on L1                |
-| `L1ToL2Relay`             | Relay messages sent from L1 to L2           |
+| Watcher                   | Description                                |
+| ------------------------- | ------------------------------------------ |
+| `bondTransferRoot`        | Bond transfer roots leaving ORUs           |
+| `bondWithdrawal`          | Bond withdrawals sent across chains        |
+| `commitTransfers`         | Commit transfers to create a transfer root |
+| `settleBondedWithdrawals` | Settle individual transfers                |
+| `confirmRoots`            | Confirm transfer roots on L1               |
+| `L1ToL2Relay`             | Relay messages sent from L1 to L2          |
 
 They should all be enabled unless there's a specific reason not to enable certain watchers.
 
@@ -361,14 +361,11 @@ Full example:
     },
     ...
   }
-
 ```
 
 ### `blocklist`
 
 Configure a blocklist of addresses for bonder to not bond transfers.
-
-
 
 Using local blocklist file of addresses:
 
@@ -408,11 +405,7 @@ OFAC list: [https://www.treasury.gov/ofac/downloads/sdnlist.txt](https://www.tre
 | `BONDER_PRIVATE_KEY` | Private key to use for signing transactions if not using an encrypted keystore.                            |
 | `KEYSTORE_PASS`      | Keystore passphrase if using encrypted keystore and not using password file or AWS Parameter Store option. |
 
-
-
 ### Notifications
-
-
 
 ### Slack
 

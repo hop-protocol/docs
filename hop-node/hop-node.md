@@ -1,8 +1,4 @@
----
-description: ⚠️ Hope node is beta
----
-
-# Hop Node
+# Welcome
 
 {% content-ref url="getting-started.md" %}
 [getting-started.md](getting-started.md)

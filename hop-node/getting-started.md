@@ -4,8 +4,6 @@ description: Instructions for running a Hop Node.
 
 # Getting started
 
-⚠️ Hope node is beta. Use at your own risk!
-
 _**Notice:** Currently Bonders must be allowed by the Hop Bridge smart contract governed by the Hop team. We are working on decentralizing the Bonder role completely. Reach out to the Hop team on discord if you are interested on becoming a bonder._
 
 ## Getting started

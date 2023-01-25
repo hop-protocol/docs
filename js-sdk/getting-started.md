@@ -1,7 +1,3 @@
----
-description: ⚠️ JavaScript SDK is in beta
----
-
 # Getting started
 
 ## Install module
@@ -661,6 +657,6 @@ If you'd like to see more examples or have any feedback, message us on [Discord]
 
 ### Contract addresses
 
-{% content-ref url="../contract-addresses.md" %}
-[contract-addresses.md](../contract-addresses.md)
+{% content-ref url="../smart-contracts/contract-addresses.md" %}
+[contract-addresses.md](../smart-contracts/contract-addresses.md)
 {% endcontent-ref %}

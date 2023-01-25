@@ -1,5 +1,5 @@
 ---
-description: Set up a Hop Node on EC2. ⚠️ Hope Node is in beta. Use at your own risk!
+description: Set up a Hop Node on EC2
 ---
 
 # EC2 Setup

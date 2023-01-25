@@ -2,7 +2,7 @@
 description: Hop Smart Contracts
 ---
 
-# Smart Contracts
+# Welcome
 
 The Hop smart contracts can be found on Github link below:
 
@@ -16,6 +16,6 @@ Smart contract integration example:
 
 Other links
 
-{% content-ref url="../contract-addresses.md" %}
-[contract-addresses.md](../contract-addresses.md)
+{% content-ref url="contract-addresses.md" %}
+[contract-addresses.md](contract-addresses.md)
 {% endcontent-ref %}

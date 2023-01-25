@@ -20,6 +20,8 @@ See bonder fee section in SDK [docs](https://docs.hop.exchange/js-sdk/getting-st
 
 Here's an pseudo code example for calculating bonder fee.
 
+_Note: The the live fee calculation may change and this may not be up-to-date._
+
 ```javascript
 bonderFee = getBonderFee(amountIn, source, destination)
 
@@ -112,7 +114,6 @@ getDestinationTxFee(source, destination) {
 
   return fee
 }
-
 ```
 
 The JS implementation is found in the [SDK here](https://github.com/hop-protocol/hop/blob/develop/packages/sdk/src/HopBridge.ts):

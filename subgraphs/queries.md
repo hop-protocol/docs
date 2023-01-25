@@ -2,15 +2,17 @@
 description: Sample Subgraph Queries
 ---
 
-# Querying
+# Queries
+
+## Querying
 
 Below are some sample queries you can use to gather information from the Hop contracts.
 
 You can build your own queries using a [GraphQL Explorer](https://graphiql-online.com/graphiql) and enter your endpoint to limit the data to exactly what you need.
 
-# Transfers
+## Transfers
 
-- Get transfer root info
+* Get transfer root info
 
 ```graphql
 {
@@ -27,7 +29,7 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Get list of transfer roots
+* Get list of transfer roots
 
 ```graphql
 {
@@ -40,8 +42,8 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Get source transfer info
-  - L2>L1 or L2>L2
+* Get source transfer info
+  * L2>L1 or L2>L2
 
 ```graphql
 {
@@ -61,7 +63,7 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Getting _transferId_ by transaction hash
+* Getting _transferId_ by transaction hash
 
 ```graphql
 {
@@ -85,9 +87,9 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Get list of transfers
-  - L2>L2 or L2>L1
-    - Use L2 subgraphs for these queries (the subgraph used is the origin chain)
+* Get list of transfers
+  * L2>L2 or L2>L1
+    * Use L2 subgraphs for these queries (the subgraph used is the origin chain)
 
 ```graphql
 {
@@ -110,9 +112,9 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- L1->L2
-  - Use L1 mainnet subgraph for these queries (the L1 subgraph is the origin chain)
-    - Note: there is no transferId for L1->L2 transfers. The id is not the same as a transferId.
+* L1->L2
+  * Use L1 mainnet subgraph for these queries (the L1 subgraph is the origin chain)
+    * Note: there is no transferId for L1->L2 transfers. The id is not the same as a transferId.
 
 ```graphql
 {
@@ -134,8 +136,8 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Get list of transfers that were bonded at destination chain
-- Use the destination chain subgraph for these queries
+* Get list of transfers that were bonded at destination chain
+* Use the destination chain subgraph for these queries
 
 ```graphql
 {
@@ -148,11 +150,11 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-**_Note: The WithdrawalBonded event does not contain the recipient or the original sender, so a lookup using the transferId will need to be used on TransferSent (origin from L2) or TransferSentToL2 (origin from L1) to retrieve those values._**
+_**Note: The WithdrawalBonded event does not contain the recipient or the original sender, so a lookup using the transferId will need to be used on TransferSent (origin from L2) or TransferSentToL2 (origin from L1) to retrieve those values.**_
 
-# Volume
+## Volume
 
-- Cumulative volume
+* Cumulative volume
 
 ```graphql
 {
@@ -163,8 +165,8 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Manual calculation
-  - The amount on _transferSents_ (xdai, polygon, arbitrum, optimism) and _transferSentToL2S_ (mainnet) entities can be added up to get overall tx volume on each chain.
+* Manual calculation
+  * The amount on _transferSents_ (xdai, polygon, arbitrum, optimism) and _transferSentToL2S_ (mainnet) entities can be added up to get overall tx volume on each chain.
 
 ```graphql
 {
@@ -186,7 +188,7 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 }
 ```
 
-- Daily Volume
+* Daily Volume
 
 ```graphql
 {
@@ -213,11 +215,11 @@ const startDate = (dayId - 1) * 86400
 const endDate = now
 ```
 
-# TVL
+## TVL
 
 ⚠️ currently the TVL entities don't report fully accurate data because it's only using add/remove liquidity events instead of tracking transfer events. Use defillama to view accurate TVL.
 
-- Cumutative TVL
+* Cumutative TVL
 
 ```graphql
 {
@@ -228,7 +230,7 @@ const endDate = now
 }
 ```
 
-- Cumulative AMM TVL
+* Cumulative AMM TVL
 
 ```graphql
 {
@@ -239,9 +241,9 @@ const endDate = now
 }
 ```
 
-# Fees
+## Fees
 
-- Cumulative AMM Fees
+* Cumulative AMM Fees
 
 ```graphql
 {
@@ -252,7 +254,7 @@ const endDate = now
 }
 ```
 
-- Cumulative Bonder Fees
+* Cumulative Bonder Fees
 
 ```graphql
 {
@@ -263,8 +265,7 @@ const endDate = now
 }
 ```
 
-Manual calculation
-The bonder fee can be calculated by adding the _bonderFee_ value from _transferSents_ entities
+Manual calculation The bonder fee can be calculated by adding the _bonderFee_ value from _transferSents_ entities
 
 ```graphql
 {
@@ -276,8 +277,8 @@ The bonder fee can be calculated by adding the _bonderFee_ value from _transferS
 }
 ```
 
-- LP fees
-  - The LP fees can be calculated by adding up *tokensSold*0.0004* from *tokenSwaps\* entities
+* LP fees
+  * The LP fees can be calculated by adding up _tokensSold_0.0004\* from \*tokenSwaps\* entities
 
 ```graphql
 {
@@ -288,11 +289,11 @@ The bonder fee can be calculated by adding the _bonderFee_ value from _transferS
 }
 ```
 
-# Pagination
+## Pagination
 
-- See [TheGraph API Pagination docs](https://docs.hop.exchange/thegraph-subgraphs#get-destination-transfer-info:~:text=See%20TheGraph%20API%20Pagination%20docs%20for%20example%20on%20how%20to%20paginate%20queries) for example on how to paginate queries
+* See [TheGraph API Pagination docs](https://docs.hop.exchange/thegraph-subgraphs#get-destination-transfer-info) for example on how to paginate queries
 
-# JavaScript fetch example
+## JavaScript fetch example
 
 ```graphql
   async function queryFetch(url, query, variables) {
@@ -349,7 +350,6 @@ The bonder fee can be calculated by adding the _bonderFee_ value from _transferS
   main().catch(console.error)
 ```
 
-# FAQ
+## FAQ
 
-Why are there multiple subgraphs?
-At the moment a subgraph with TheGraph can only be tied to one chain meaning it doesn't have the context or events from the other chains, hence the chain specific subgraph urls. Maybe in the future TheGraph will support multi-chain subgraphs.
+Why are there multiple subgraphs? At the moment a subgraph with TheGraph can only be tied to one chain meaning it doesn't have the context or events from the other chains, hence the chain specific subgraph urls. Maybe in the future TheGraph will support multi-chain subgraphs.

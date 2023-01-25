@@ -1,8 +1,4 @@
----
-description: ⚠️ JavaScript SDK is in beta
----
-
-# JS SDK
+# Welcome
 
 A JavaScript SDK is available for using and integrating with Hop.
 
@@ -15,4 +11,3 @@ Check out the links below to get started.
 {% content-ref url="api-reference.md" %}
 [api-reference.md](api-reference.md)
 {% endcontent-ref %}
-
