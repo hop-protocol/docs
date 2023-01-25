@@ -10,6 +10,6 @@ The live mainnet Hop contract addresses can be found in the link below:
 
 Other links
 
-{% content-ref url="smart-contracts.md" %}
-[smart-contracts.md](smart-contracts.md)
+{% content-ref url="smart-contracts/" %}
+[smart-contracts](smart-contracts/)
 {% endcontent-ref %}

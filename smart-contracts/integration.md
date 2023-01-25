@@ -84,22 +84,22 @@ Some good examples you can check out as a reference are:
 
 The L1 Bridge addresses, L2 Bridge addresses, L2 AMM wrapper addresses, and other Hop contract addresses can be found on this link:
 
-{% content-ref url="contract-addresses.md" %}
-[contract-addresses.md](contract-addresses.md)
+{% content-ref url="../contract-addresses.md" %}
+[contract-addresses.md](../contract-addresses.md)
 {% endcontent-ref %}
 
 ### Calcuating Bonder Fee
 
-There's a REST API you can use to get estimated bonder fee. See [API docs](../api/api.md).
+There's a REST API you can use to get estimated bonder fee. See [API docs](../api/).
 
-{% content-ref url="../api/api.md" %}
-[api.md](../api/api.md)
+{% content-ref url="../api/" %}
+[api](../api/)
 {% endcontent-ref %}
 
 ### Getting transfer status
 
-There's a REST API you can use to get transfer status. See [API docs](../api/api.md).
+There's a REST API you can use to get transfer status. See [API docs](../api/).
 
-{% content-ref url="../api/api.md" %}
-[api.md](../api/api.md)
+{% content-ref url="../api/" %}
+[api](../api/)
 {% endcontent-ref %}

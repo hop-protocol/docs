@@ -2,14 +2,14 @@
 
 Welcome to the Hop Developer documentation!
 
-{% content-ref url="js-sdk/js-sdk.md" %}
-[js-sdk.md](js-sdk/js-sdk.md)
+{% content-ref url="js-sdk/" %}
+[js-sdk](js-sdk/)
 {% endcontent-ref %}
 
-{% content-ref url="hop-node/hop-node.md" %}
-[hop-node.md](hop-node/hop-node.md)
+{% content-ref url="hop-node/" %}
+[hop-node](hop-node/)
 {% endcontent-ref %}
 
-{% content-ref url="other/on-the-web.md" %}
-[on-the-web.md](other/on-the-web.md)
+{% content-ref url="on-the-web.md" %}
+[on-the-web.md](on-the-web.md)
 {% endcontent-ref %}

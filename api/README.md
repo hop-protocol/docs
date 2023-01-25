@@ -2,7 +2,7 @@
 description: API examples
 ---
 
-# API
+# API Endpoints
 
 > This API is a simple wrapper around the SDK offered for convenience on getting estimated bonder fee and transfer status.
 
@@ -16,14 +16,14 @@ Although this API is offered as a free service, it's recommended to host your ow
 
 Input query parameters:
 
-| Parameters  | Description                                                     |
-| ----------- | --------------------------------------------------------------- |
-| `amount`    | (required) Amount in smallest use (eg. `amount=1000000` which is 1 USDC)    |
-| `token`     | (required) Token symbol (eg. `token=USDC`)                                  |
-| `fromChain` | (required) From chain slug (eg. `fromChain=optimism`)                       |
-| `toChain`   | (required) To chain slug (eg. `toChain=polygon`)                            |
-| `slippage`  | (required) Slippage percentage (eg. `slippage=0.5` which is 0.5%)           |
-| `network`  | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet (eg. `network=goerli`) |
+| Parameters  | Description                                                                                                      |
+| ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| `amount`    | (required) Amount in smallest use (eg. `amount=1000000` which is 1 USDC)                                         |
+| `token`     | (required) Token symbol (eg. `token=USDC`)                                                                       |
+| `fromChain` | (required) From chain slug (eg. `fromChain=optimism`)                                                            |
+| `toChain`   | (required) To chain slug (eg. `toChain=polygon`)                                                                 |
+| `slippage`  | (required) Slippage percentage (eg. `slippage=0.5` which is 0.5%)                                                |
+| `network`   | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet (eg. `network=goerli`) |
 
 Chain options are: `ethereum`, `optimism`, `arbitrum`, `polygon`, `gnosis`
 
@@ -61,11 +61,11 @@ Output response:
 
 Input query parameters:
 
-| Parameters     | Description                                   |
-| -------------- | --------------------------------------------- |
-| `transferHash` | (optional\*) Origin transfer transaction hash |
-| `transferId`   | (optional\*) Transfer ID                      |
-| `network`  | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet |
+| Parameters     | Description                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| `transferHash` | (optional\*) Origin transfer transaction hash                                             |
+| `transferId`   | (optional\*) Transfer ID                                                                  |
+| `network`      | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet |
 
 \* Must use at lease one option, either `transactionHash` or `transferId`.
 
@@ -136,13 +136,13 @@ By default, public RPC urls are used, which are subject to rate limits. You can 
 
 Input query parameters:
 
-| Parameters  | Description                                                     |
-| ----------- | --------------------------------------------------------------- |
-| `rpcUrl[ethereum]` | (optional) Ethereum RPC url (eg. rpcUrl[ethereum]=https://mainnet.infura.io/v3/84842078b09946638c03157f83405213) |
-| `rpcUrl[optimism]` | (optional) Optimism RPC url (eg. rpcUrl[optimism]=https://mainnet.optimism.io) |
-| `rpcUrl[arbitrum]` | (optional) Arbitrum RPC url (eg. rpcUrl[arbitrum]=https://arb1.arbitrum.io/rpc) |
-| `rpcUrl[polygon]` | (optional) Polygon RPC url (eg. rpcUrl[polygon]=https://polygon-rpc.com) |
-| `rpcUrl[gnosis]` | (optional) Gnosis Chain RPC url (eg. rpcUrl[gnosis]=https://rpc.gnosischain.com) |
+| Parameters         | Description                                                                                                       |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| `rpcUrl[ethereum]` | (optional) Ethereum RPC url (eg. rpcUrl\[ethereum]=https://mainnet.infura.io/v3/84842078b09946638c03157f83405213) |
+| `rpcUrl[optimism]` | (optional) Optimism RPC url (eg. rpcUrl\[optimism]=https://mainnet.optimism.io)                                   |
+| `rpcUrl[arbitrum]` | (optional) Arbitrum RPC url (eg. rpcUrl\[arbitrum]=https://arb1.arbitrum.io/rpc)                                  |
+| `rpcUrl[polygon]`  | (optional) Polygon RPC url (eg. rpcUrl\[polygon]=https://polygon-rpc.com)                                         |
+| `rpcUrl[gnosis]`   | (optional) Gnosis Chain RPC url (eg. rpcUrl\[gnosis]=https://rpc.gnosischain.com)                                 |
 
 Example request
 

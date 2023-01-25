@@ -2,6 +2,6 @@
 
 Check out the FAQ for additional Q/A bonder questions
 
-{% content-ref url="../other/faq.md" %}
-[faq.md](../other/faq.md)
+{% content-ref url="../faq.md" %}
+[faq.md](../faq.md)
 {% endcontent-ref %}

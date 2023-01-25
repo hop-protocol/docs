@@ -2,6 +2,8 @@
 description: Hop Subgraphs
 ---
 
+# Welcome
+
 {% content-ref url="entities.md" %}
 [entities.md](entities.md)
 {% endcontent-ref %}
@@ -10,8 +12,6 @@ description: Hop Subgraphs
 [queries.md](queries.md)
 {% endcontent-ref %}
 
-
 {% content-ref url="subgraph-info.md" %}
 [subgraph-info.md](subgraph-info.md)
 {% endcontent-ref %}
-

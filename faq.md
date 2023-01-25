@@ -181,8 +181,8 @@ You can also try the following Hop IPFS links:
 
 * [https://hop.eth.limo](https://hop.eth.limo)
 * [https://hop.eth.link](https://hop.eth.link)
-* [ https://hop-exchange.ipns.dweb.link/](https://hop-exchange.ipns.dweb.link/)
-* [ https://hop-exchange.ipns.cf-ipfs.com/](https://hop-exchange.ipns.cf-ipfs.com/)
+* [https://hop-exchange.ipns.dweb.link/](https://hop-exchange.ipns.dweb.link/)
+* [https://hop-exchange.ipns.cf-ipfs.com/](https://hop-exchange.ipns.cf-ipfs.com/)
 
 ## How can I contribute to Hop?
 
@@ -219,8 +219,6 @@ Subgraph links can be found on the Hop subgraph repo:[ https://github.com/hop-pr
 ## Why don't I see my funds after transferring to a centralized exchange?
 
 Make sure that the centralized exchange supports reading internal transactions. For example, transferring ETH to a Binance address on Arbitrum could result in loss of funds because Binance doesn't support internal transactions and won't recognize the transaction.
-
-
 
 ## Does Hop have a web bug bounty program?
 
@@ -259,8 +257,8 @@ Certain vulnerabilities are considered out-of-scope for the Bug Bounty Program. 
 \- Vulnerabilities involving stolen credentials or physical access to a device\
 \- Social engineering attacks, including those targeting or impersonating internal employees by any means\
 \- Open redirection, except in the following circumstances:\
-&#x20;   \- Clicking an Hop-owned URL immediately results in a redirection\
-&#x20;   \- A redirection results in the loss of sensitive data (e.g. session tokens, PII, etc)\
+\- Clicking an Hop-owned URL immediately results in a redirection\
+\- A redirection results in the loss of sensitive data (e.g. session tokens, PII, etc)\
 \- Host header injections without a specific, demonstrable impact\
 \- Denial of service (DOS) attacks using automated tools\
 \- Self-XSS, which includes any payload entered by the victim\
@@ -268,8 +266,8 @@ Certain vulnerabilities are considered out-of-scope for the Bug Bounty Program. 
 \- Login/logout CSRF\
 \- Content spoofing without embedding an external link or JavaScript\
 \- Infrastructure vulnerabilities, including:\
-&#x20;   \- Issues related to SSL certificates\
-&#x20;   \- DNS configuration issues\
+\- Issues related to SSL certificates\
+\- DNS configuration issues\
 \- Server configuration issues (e.g. open ports, TLS versions, etc.)\
 \- Most vulnerabilities within our sandbox, lab, or staging environments, except Braintree.\
 \- Vulnerabilities only affecting users of outdated or unpatched browsers and platforms\
@@ -292,13 +290,13 @@ For all submissions, please include:
 
 \- Full description of the vulnerability being reported, including the exploitability and impact\
 Evidence and explanation of all steps required to reproduce the submission, which may include:\
-&#x20;   \- Videos\
-&#x20;   \- Screenshots\
-&#x20;   \- Exploit code\
-&#x20;   \- Traffic logs\
-&#x20;   \- Web/API requests and responses\
-&#x20;   \- Email address or user ID of any test accounts\
-&#x20;   \- IP address used during testing
+\- Videos\
+\- Screenshots\
+\- Exploit code\
+\- Traffic logs\
+\- Web/API requests and responses\
+\- Email address or user ID of any test accounts\
+\- IP address used during testing
 
 Reward Amounts
 
@@ -311,8 +309,6 @@ Reward Amounts
 \- High: TDB
 
 \- Critical: TBD
-
-
 
 Bounty rewards are determined on a case-by-case basis.
 

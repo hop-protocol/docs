@@ -4,17 +4,17 @@
 
 ## JavaScript SDK <a href="#js-sdk" id="js-sdk"></a>
 
-* [Welcome](js-sdk/js-sdk.md)
+* [Welcome](js-sdk/README.md)
 * [Getting started](js-sdk/getting-started.md)
 * [API Reference](js-sdk/api-reference.md)
 
 ## API
 
-* [API Endpoints](api/api.md)
+* [API Endpoints](api/README.md)
 
 ## Hop Node
 
-* [Welcome](hop-node/hop-node.md)
+* [Welcome](hop-node/README.md)
 * [Getting started](hop-node/getting-started.md)
 * [Requirements](hop-node/requirements.md)
 * [Configuration](hop-node/configuration.md)
@@ -39,20 +39,20 @@
 
 ## Subgraphs
 
-* [Welcome](subgraphs/thegraph-subgraphs.md)
-* [Entities](subgraphs/entities.md)
-* [Queries](subgraphs/queries.md)
-* [Subgraph Info](subgraphs/subgraph-info.md)
+* [Welcome](thegraph-subgraphs/README.md)
+* [Entities](thegraph-subgraphs/entities.md)
+* [Queries](thegraph-subgraphs/queries.md)
+* [Subgraph Info](thegraph-subgraphs/subgraph-info.md)
 
 ## Smart Contracts
 
-* [Welcome](smart-contracts/smart-contracts.md)
+* [Welcome](smart-contracts/README.md)
 * [Integration](smart-contracts/integration.md)
-* [Contract Addresses](smart-contracts/contract-addresses.md)
+* [Contract Addresses](contract-addresses.md)
 
 ## Fees
 
-* [Fee Calculation](fees/fee-calculation.md)
+* [Fee Calculation](fee-calculation.md)
 
 ***
 
@@ -60,6 +60,6 @@
 
 ## Other
 
-* [Assets](other/assets.md)
-* [On the web](other/on-the-web.md)
-* [FAQ](other/faq.md)
+* [Assets](assets.md)
+* [On the web](on-the-web.md)
+* [FAQ](faq.md)
