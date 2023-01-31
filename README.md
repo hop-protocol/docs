@@ -2,16 +2,16 @@
 
 Welcome to the Hop Protocol v1 Developer documentation!
 
-{% content-ref url="js-sdk/" %}
-[js-sdk](js-sdk/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="hop-node/" %}
-[hop-node](hop-node/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="on-the-web.md" %}
-[on-the-web.md](on-the-web.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### Looking for the v2 Docs?
