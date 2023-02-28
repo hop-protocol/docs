@@ -80,7 +80,7 @@ Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of t
 
 ## Kovan
 
-### Ethereum
+### Ethereum (Kovan)
 
 Chain ID: `42`
 
@@ -88,7 +88,7 @@ Chain ID: `42`
 | ------------------------------------------------------------- |
 | `https://kovan.infura.io/v3/84842078b09946638c03157f83405213` |
 
-### Gnosis Chain (formerly xDai)
+### Gnosis Chain (formerly xDai) Kovan
 
 Chain ID: `77`
 
@@ -96,7 +96,7 @@ Chain ID: `77`
 | --------------------------- |
 | `https://sokol.poa.network` |
 
-### Optimism
+### Optimism (Kovan)
 
 Chain ID: `69`
 
@@ -104,17 +104,17 @@ Chain ID: `69`
 | --------------------------- |
 | `https://kovan.optimism.io` |
 
-### Arbitrum
+### Arbitrum (Kovan)
 
 Arbitrum is not supported on Kovan
 
-### Polygon
+### Polygon (Kovan)
 
 Polygon is not supported on Kovan
 
 ## Goerli
 
-### Ethereum
+### Ethereum (Goerli)
 
 Chain ID: `5`
 
@@ -122,25 +122,27 @@ Chain ID: `5`
 | -------------------------------------------------------------- |
 | `https://goerli.infura.io/v3/84842078b09946638c03157f83405213` |
 
-### Polygon
+### Polygon (Mumbai)
 
 Chain ID: `80001`
 
 | URL                                               |
 | ------------------------------------------------- |
+| `https://rpc.ankr.com/polygon_mumbai` |
 | `https://matic-testnet-archive-rpc.bwarelabs.com` |
 
-### Gnosis Chain (formerly xDai)
+### Gnosis Chain (formerly xDai) Goerli
 
 Gnosis Chain is not supported on Goerli
 
-### Optimism
+### Optimism (Goerli)
 
 | URL                          |
 | ---------------------------- |
+| `https://rpc.ankr.com/optimism_testnet` |
 | `https://goerli.optimism.io` |
 
-### Arbitrum
+### Arbitrum (Goerli)
 
 | URL                            |
 | ------------------------------ |
