@@ -1,5 +1,5 @@
 # API Reference
 
-API Reference has been moved to [github](https://github.com/hop-protocol/hop/tree/develop/packages/sdk/docs).
+API Reference has been moved to GitHub:
 
-See: [https://github.com/hop-protocol/hop/tree/develop/packages/sdk/docs](https://github.com/hop-protocol/hop/tree/develop/packages/sdk/docs)
+{% embed url="https://github.com/hop-protocol/hop/tree/develop/packages/sdk/docs" %}
