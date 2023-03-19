@@ -38,22 +38,28 @@ Example response
 ```json
 {
   "amountIn": "1000000",
-  "slippage": "0.5",
-  "amountOutMin": "994836",
-  "bonderFee": "250613",
-  "estimatedRecieved": "749223"
+  "slippage": 0.5,
+  "amountOutMin": "743633",
+  "destinationAmountOutMin": "742915",
+  "bonderFee": "250515",
+  "estimatedRecieved": "747908",
+  "deadline": 1679862208,
+  "destinationDeadline": 1679862208
 }
 ```
 
 Output response:
 
-| Parameters          | Description                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------- |
-| `amountIn`          | Specified amount in                                                                         |
-| `slippage`          | Specified slippage                                                                          |
-| `amountOutMin`      | The minimum amount out to receive from AMM taking account AMM fees and slippage             |
-| `bonderFee`         | The suggested bonder fee for the amount in                                                  |
-| `estimatedReceived` | The estimated amount you'll receive at the destination taking account all fees and slippage |
+| Parameters                | Description                                                                                                                                                                                     |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `amountIn`                | Specified amount in.                                                                                                                                                                            |
+| `slippage`                | Specified slippage.                                                                                                                                                                             |
+| `amountOutMin`            | The minimum amount out to receive from AMM at origin chain (or destination chain if sending from L1), taking account AMM fees, slippage, and total bonder fee.                                  |
+| `destinationAmountOutMin` | The minimum amount out to receive from AMM at destination chain, taking account, AMM fees, slippage, and total bonder fee. Note: There is no AMM on L1, so this should be 0 when sending to L1. |
+| `bonderFee`               | The suggested bonder fee for the amount in. The bonder fee also includes the cost of the destination transaction fee.                                                                           |
+| `estimatedReceived`       | The estimated amount you'll receive at the destination taking account all fees and slippage.                                                                                                    |
+| `deadline`                | A default deadline of 7 days to perform swap at origin AMM (or destination AMM if sending from L1).                                                                                             |
+| `destinationDeadline`     | A default deadline of 7 days to perform swap at destination AMM. Note: There is no AMM on L1, so this should be 0 when sending to L1.                                                           |
 
 ## GET /v1/transfer-status
 
