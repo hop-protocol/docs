@@ -6,17 +6,22 @@ description: Fee calculation
 
 ## Bonder Fee
 
-A bonder fee is required when sending L2->L2 or L2->L1. There is no bonder fee when sending L1->L2.
+A bonder fee is required when sending L2->L2 or L2->L1.
 
 The bonder fee calculation is a little complex since it involves getting AMM estimated amount outs on both source and destination chains and getting the estimated destination bond transaction fee.
 
-The simplest way to get the estimated total bonder fee to use when sending transfers is to use the `getTotalFee()` [JS SDK method](https://docs.hop.exchange/js-sdk/getting-started#estimate-total-bonder-fee).
+The simplest way to get the estimated total bonder fee to use when sending transfers is to use the `getTotalFee()` JS SDK method.
 
-See bonder fee section in SDK [docs](https://docs.hop.exchange/js-sdk/getting-started#get-all-send-data-info)
+## Relayer Fee
 
-{% embed url="https://docs.hop.exchange/js-sdk/getting-started#get-all-send-data-info" %}
+A bonder fee can be applied when sending L1->L2.
 
-### Implementation pseudo code
+The relayer fee represents the cost of relaying the transaction on each L2. Since this is often low, bonders can choose to ignore this. When L2 gas is high, bonders might enforce this fee.
+
+This fee can be retrieved in the same way as the bonder fee by use the `getTotalFee()` JS SDK method.
+
+
+### Bonder fee implementation pseudo code
 
 Here's an pseudo code example for calculating bonder fee.
 
