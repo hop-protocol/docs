@@ -658,7 +658,7 @@ const transferIdOrTxHash = '0xbc24dd151ced6ad0d725c753b513a2164e669868faeebea822
 
 const sdk = new Hop('mainnet')java
 const bridge = sdk.bridge('ETH')
-const txData = await bridge.populateWithdrawTransfer(sourceChain, destinationChain, transferIdOrTxHash)
+const txData = await bridge.populateWithdrawTransferTx(sourceChain, destinationChain, transferIdOrTxHash)
 console.log(txData) // { "data": "0x...", "to": "0x..." }
 ```
 
