@@ -384,7 +384,7 @@ if (allowance.lt(transferAmount)) {
 
 ### Send tokens over canonical bridge (deprecated)
 
-#### Deposit tokens (L1 -> L2):
+#### Deposit tokens using canonical bridge (L1 -> L2) (deprecated):
 
 ```javascript
 import { Hop, Chain } from '@hop-protocol/sdk'
@@ -397,7 +397,7 @@ const tx = await bridge.deposit('100000000')
 console.log(tx.hash)
 ```
 
-#### Withdraw tokens (L2 -> L1):
+#### Withdraw tokens using canonical bridge (L2 -> L1) (deprecated):
 
 ```javascript
 import { Hop, Chain } from '@hop-protocol/sdk'
@@ -644,6 +644,42 @@ hop.setChainProviders({
   arbitrum: new providers.StaticJsonRpcProvider('https://arb1.arbitrum.io/rpc'),
 })
 ```
+
+### Withdraw an unbonded transfer at the destination
+
+Get the populated withdraw transfer transaction data:
+
+```javascript
+import { Hop } from '@hop-protocol/sdk'
+
+const sourceChain = 'optimism'
+const destinationChain = 'ethereum'
+const transferIdOrTxHash = '0xbc24dd151ced6ad0d725c753b513a2164e669868faeebea8224dd0b92e751df7'
+
+const sdk = new Hop('mainnet')java
+const bridge = sdk.bridge('ETH')
+const txData = await bridge.populateWithdrawTransfer(sourceChain, destinationChain, transferIdOrTxHash)
+console.log(txData) // { "data": "0x...", "to": "0x..." }
+```
+
+Send transaction to withdraw transfer:
+
+```javascript
+import { Hop } from '@hop-protocol/sdk'
+
+const sourceChain = 'optimism'
+const destinationChain = 'ethereum'
+const transferIdOrTxHash = '0xbc24dd151ced6ad0d725c753b513a2164e669868faeebea8224dd0b92e751df7'
+
+const sdk = new Hop('mainnet')
+const bridge = sdk.bridge('ETH')
+const tx = await bridge.withdrawTransfer(sourceChain, destinationChain, transferIdOrTxHash)
+console.log(tx.hash)
+```
+
+Note: A transfer can be withdrawn only after the transfer root has been set at the destination chain, which may take a few hours or days depending on the chain.&#x20;
+
+The UI to withdraw transfers is found at [https://app.hop.exchange/#/withdraw](https://app.hop.exchange/#/withdraw)
 
 ### More examples
 
