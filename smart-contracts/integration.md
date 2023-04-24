@@ -88,7 +88,7 @@ The L1 Bridge addresses, L2 Bridge addresses, L2 AMM wrapper addresses, and othe
 [contract-addresses.md](../contract-addresses.md)
 {% endcontent-ref %}
 
-### Calcuating Bonder Fee
+### Calculating Bonder Fee
 
 There's a REST API you can use to get estimated bonder fee. See [API docs](../api/).
 
