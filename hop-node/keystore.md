@@ -147,8 +147,6 @@ hop-node keystore reencrypt
 {% endtab %}
 {% endtabs %}
 
-asdf
-
 ### View keystore address
 
 Use the `keystore address` command to print the keystore public address:

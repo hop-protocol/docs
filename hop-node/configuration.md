@@ -146,6 +146,7 @@ _Note: The configuration requirements are evolving so documentation may not be u
 | `commitTransfers` | Configuration for committing transfers.                                                                               |
 | `fees`            | Set bonder fees for each asset in terms of basis points ([BPS](https://www.investopedia.com/terms/b/basispoint.asp)). |
 | `bonders`         | List of other bonders, used for calculating total available liquidity. See bonders section below for details.         |
+| `signer`          | Signer options. See signer section below for details.                                                                 |
 
 ### `chains`
 
@@ -397,6 +398,21 @@ Using inline list of blocklisted addresses:
 Note: The Hop Node will need to be restarted whenever updating local, remote, or inline blocklist of addresses.
 
 OFAC list: [https://www.treasury.gov/ofac/downloads/sdnlist.txt](https://www.treasury.gov/ofac/downloads/sdnlist.txt)
+
+### `signer`
+
+Configure options for keystore:
+
+| Key                  | Default value               | Example                     | Description                                        |
+| -------------------- | --------------------------- | --------------------------- | -------------------------------------------------- |
+| `type`               |                             | `lambda`                    | Type of signer to use. Either `kms` or `lambda`.   |
+| `keyId`              |                             | 11223344                    | AWS KMS keyId.                                     |
+| `awsRegion`          |                             | `us-east-1`                 | AWS region to use when using KMS or Lambda.        |
+| `lambdaFunctionName` |                             | `myFunction`                | Name fo the Lambda function to call.               |
+
+{% content-ref url="signer.md" %}
+[keystore.md](signer.md)
+{% endcontent-ref %}
 
 ### Environment variables
 
