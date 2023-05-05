@@ -49,7 +49,7 @@ This step entails creating one IAM policy that enables the Lambda function to in
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "VisualEditor0",
+            "Sid": "LambdaKMSAccess",
             "Effect": "Allow",
             "Action": [
                 "kms:GetPublicKey",
@@ -70,7 +70,7 @@ This step entails creating one IAM policy that enables the Lambda function to in
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "VisualEditor0",
+            "Sid": "UserLambdaInvoke",
             "Effect": "Allow",
             "Action": "lambda:InvokeFunction",
             "Resource": "arn:aws:lambda:<YOUR_REGION>:<YOUR_ACCOUNT_ID>:function:Hop_BonderLambdaValidation"
