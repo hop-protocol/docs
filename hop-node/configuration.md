@@ -401,7 +401,7 @@ OFAC list: [https://www.treasury.gov/ofac/downloads/sdnlist.txt](https://www.tre
 
 ### `signer`
 
-Configure options for keystore:
+Configure options for signer:
 
 | Key                  | Default value               | Example                     | Description                                        |
 | -------------------- | --------------------------- | --------------------------- | -------------------------------------------------- |
