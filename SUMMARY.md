@@ -19,6 +19,7 @@
 * [Requirements](hop-node/requirements.md)
 * [Configuration](hop-node/configuration.md)
 * [Keystore](hop-node/keystore.md)
+* [Signer](hop-node/signer.md)
 * [Staking](hop-node/staking.md)
 * [Installing Docker](hop-node/installing-docker.md)
 * [Docker image](hop-node/docker.md)
