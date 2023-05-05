@@ -411,7 +411,7 @@ Configure options for keystore:
 | `lambdaFunctionName` |                             | `myFunction`                | Name fo the Lambda function to call.               |
 
 {% content-ref url="signer.md" %}
-[keystore.md](signer.md)
+[signer.md](signer.md)
 {% endcontent-ref %}
 
 ### Environment variables
