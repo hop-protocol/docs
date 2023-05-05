@@ -87,6 +87,12 @@ _**Notice:** If the bonder process is running on an EC2 instance, parts of this 
 
 This step will create an IAM user and attach the appropriate policies for operation.
 
-4.1. On AWS, go to "IAM" and create a user. During the setup, choose "Attach policies directly" and search for the "Hop_BonderToLambdaPolicy". 
+4.1. On AWS, go to **IAM** and create a user. During the setup, choose "Attach policies directly" and search for the "Hop_BonderToLambdaPolicy". Name the user "Hop_BonderIamUser".
 
 4.2. Once that has been completed, go back to "IAM" and choose "Policies". Search for "Hop_LambdaToKmsPolicy" and attach it to the "Hop_BonderLambdaValidation" entity. Note that the actual name of the entity will be "Hop_BonderLambdaValidation-role-xxxxxxxx".
+
+### 5. Generate IAM User Credentials
+
+This step will create IAM user credentials to add to your server.
+
+5.1. On AWS, go to **IAM** and choose the "Hop_BonderIamUser" user. Go to "Security Credentials" and create an access key. Create the access key and copy the "access key" an "secret access key" onto your server. It is not necessary to back up these values. If they are lost, you can easily create new ones.
