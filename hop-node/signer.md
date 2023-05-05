@@ -4,7 +4,7 @@ description: Hop Node signer documentation
 
 # Signer
 
-A Hop bonder can leverage an Ethereum key hosted in AWS Key Management Service (KMS) to enhance security and add an extra layer of validation by incorporating an AWS Lambda function between the bonder process and the KMS key. This method ensures that your Ethereum private key remains within the AWS Hardware Security Module (HSM) it was generated on. Additionally, AWS can enforce per-transaction validation to potentially halt transactions if your server is compromised, effectively binding the security of your bonder to your AWS account.
+A Hop bonder can leverage an Ethereum key hosted in AWS Key Management Service (KMS) to enhance security and add an extra layer of validation by incorporating an AWS Lambda function between the bonder process and the KMS key. This method ensures that your Ethereum private key remains within the AWS Hardware Security Module (HSM) it was generated on. Additionally, you can enforce per-transaction validation on AWS to potentially halt transactions if your server is compromised, effectively binding the security of your bonder to your AWS account.
 
 Follow these steps to configure a KMS signer with Lambda for a Hop bonder. Ensure you understand each step and have a solid grasp of AWS services and Hop Protocol concepts before implementing this feature.
 
