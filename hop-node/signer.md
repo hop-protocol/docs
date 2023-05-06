@@ -83,7 +83,7 @@ This step entails creating one IAM policy that enables the Lambda function to in
 
 ### 4. Create IAM User and Attach IAM policy
 
-_**Notice:** If the bonder process is running on an EC2 instance, parts of this step can be simplified. The creation of the user can be bypassed and the policies can be applied directly to the EC2 instance. This guide does not provide steps showing how this._
+_**Notice:** If the bonder process is running on an EC2 instance, parts of this step can be simplified. The creation of the user can be bypassed and the policies can be applied directly to the EC2 instance. This guide does not provide steps showing how to do this simplified approach._
 
 This step will create an IAM user and attach the appropriate policies for operation.
 
