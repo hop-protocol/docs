@@ -150,13 +150,19 @@ _Note: The configuration requirements are evolving so documentation may not be u
 
 ### `chains`
 
-Specify configuration options for each chain:
+Specify configuration options for each chain.
+
+The RPC URL is optional and a default will be used if not specified. The redundant RPC URLs are optional. If supplied, these URLs will be utilized to confirm data on the source chain before proceeding with a transaction on the destination chain."
+
+_Note: If the selected network doesn't support a chain, it will be ignored._
+
 
 ```javascript
 "chains": {
   "<chain-slug>": {
     "rpcUrl": "<chain-rpc-url>",
-    "maxGasPrice": <max-gas-price>
+    "maxGasPrice": "<max-gas-price>a",
+    "redundantRpcUrls": ["<chain-rpc-url>, ..."]
   },
   ...
 }
@@ -172,9 +178,6 @@ Chain slug options:
 | `optimism` | Optimism                     |
 | `polygon`  | Polygon (formerly Matic)     |
 
-_Note: The RPC URL is optional and a default will be used if not specified._
-
-_Note: If the selected network doesn't support a chain, it will be ignored._
 
 ### `tokens`
 
