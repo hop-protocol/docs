@@ -2,9 +2,11 @@
 description: Instructions for running a Hop Node.
 ---
 
-# Getting started
+# Running a Hop Bonder
 
 _**Notice:** Currently Bonders must be allowed by the Hop Bridge smart contract governed by the Hop team. We are working on decentralizing the Bonder role completely. Reach out to the Hop team on discord if you are interested on becoming a bonder._
+
+Welcome to the guide for setting up and running a Hop bonder! By sequentially following these steps, you should be up and running with your own bonder in no time! Click "Next" below to move onto the next step.
 
 ## Getting started
 
