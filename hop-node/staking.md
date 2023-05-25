@@ -9,7 +9,7 @@ Example: Stake on 100 USDC on Arbitrum
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-docker run -it -v ~/.hop-node:/root hopprotocol/hop-node stake --config /root/config.json --chain=arbitrum --token=USDC --amount=100
+hop stake --chain=arbitrum --token=USDC --amount=100
 ```
 {% endtab %}
 
@@ -29,7 +29,7 @@ Example: Unstake on 100 USDC on Arbitrum
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-docker run -it -v ~/.hop-node:/root hopprotocol/hop-node unstake --config /root/config.json --chain=arbitrum --token=USDC --amount=100
+hop unstake --chain=arbitrum --token=USDC --amount=100
 ```
 {% endtab %}
 
@@ -49,7 +49,7 @@ Example: Show USDC amount staked on Arbitrum
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-docker run -it -v ~/.hop-node:/root hopprotocol/hop-node stake-status --config /root/config.json --chain=arbitrum --token=USDC
+hop stake-status --chain=arbitrum --token=USDC
 ```
 {% endtab %}
 

@@ -15,7 +15,7 @@ docker run -v ~/.hop-node:/root hopprotocol/hop-node --config /root/config.json
 If you're using a keystore and need to enter the passphrase, use the flags `-it` to run docker in iterative mode.
 
 ```bash
-docker run -it -v ~/.hop-node:/root hopprotocol/hop-node --config /root/config.json
+hop
 ```
 
 If using environment variables from a `.env` file, use the `--env-file` flag:

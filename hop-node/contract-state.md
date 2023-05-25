@@ -11,7 +11,7 @@ Prints the state of bridge and AMM contracts
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-docker run -it -v ~/.hop-node:/root hopprotocol/hop-node contract-state --config /root/config.json --token USDC --l1bridge --l2bridge --l2amm --l2ammwrapper
+hop contract-state --token USDC --l1bridge --l2bridge --l2amm --l2ammwrapper
 ```
 {% endtab %}
 

@@ -1,63 +1,8 @@
 ---
-description: Hop Node keystore documentation
+description: Options when Using your Keystore
 ---
 
-# Keystore
-
-## Generate Keystore
-
-Use the `keystore generate` command to generate an encrypted keystore:
-
-{% tabs %}
-{% tab title="Docker" %}
-```bash
-hop keystore generate --path /root/keystore.json
-```
-{% endtab %}
-
-{% tab title="Node" %}
-```bash
-hop-node keystore generate
-```
-{% endtab %}
-{% endtabs %}
-
-It will prompt you for a passphrase:
-
-```bash
-Enter new keystore encryption passphrase: ********
-Confirm passphrase: ********
-```
-
-Then it will display your seed phrase. This only displayed once here so make sure to copy it.
-
-```bash
-This is your seed phrase. Write it down and store it safely.
-
-inquiry leisure hurry trade leave gown add sad feel salad seat west scare filter swear siege buyer funny detect noble scene index traffic extend
-
-Press [Enter] when you have written down your mnemonic.
-```
-
-Next you will have to paste in the mnemonic you copied to confirm:
-
-```bash
-Please type mnemonic (separated by spaces) to confirm you have written it down
-
-: nice grow shine drift recycle survey piano rifle soccer business evidence stand pave belt room size neither volume odor sorry ten flash deliver rack
-```
-
-Your keystore should now be generated and stored in the default location`~/.hop-node/keystore.json`
-
-```bash
-Creating your keys
-Creating your keystore
-Public address: 0x2c2c2420128945403197a768a39fe5a8fda60f39
-Your keys can be found at: /home/mota/.hop-node/keystore.json
-
-Keystore generation is complete.
-Press [Enter] to exit.
-```
+# Keystore Options
 
 ### Use a custom keystore location
 
@@ -154,7 +99,7 @@ Use the `keystore address` command to print the keystore public address:
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-docker run -v ~/.hop-node:/root hopprotocol/hop-node keystore address --path /root/keystore.json
+hop keystore address --path /root/keystore.json
 ```
 {% endtab %}
 

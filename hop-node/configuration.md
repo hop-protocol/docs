@@ -1,12 +1,13 @@
 ---
-description: Hop Node configuration examples
+description: Bonder configuration examples
 ---
 
 # Configuration
 
-_Note: The configuration requirements are evolving so documentation may not be up-to-date. Please let us know if there are issues setting up the Hop Node._
+The bonder configuration will prepare the networks and assets supported by your bonder. The config is very custom to your bonder, so please read through each item carefully.
 
-**Please ask the Hop team for an configuration specific to your Hop Node if you are going to be a whitelisted bonder.**
+Below is an example of a USDC bonder running on Ethereum, Gnosis, Polygon, Optimism, and Arbitrum.
+
 
 ## Configuration example
 

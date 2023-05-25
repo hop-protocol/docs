@@ -22,8 +22,9 @@
         * [Add SSH 2FA](hop-node/ssh-2fa.md)
     * [Installing the Bonder](hop-node/installing-the-bonder.md)
         * [Installing the Bonder with Docker (recommended)](hop-node/installing-the-bonder-with-docker.md)
-* [Configuration](hop-node/configuration.md)
-* [Keystore](hop-node/keystore.md)
+    * [Configuring the Bonder](hop-node/configuring-the-bonder.md)
+        * [Keystore](hop-node/keystore.md)
+        * [Configuration](hop-node/configuration.md)
 * [Signer](hop-node/signer.md)
 * [Staking](hop-node/staking.md)
 * [Running Docker container](hop-node/running-docker-container.md)
@@ -37,6 +38,7 @@
 * [CLI Commands](hop-node/cli-commands.md)
 * [Contract State](hop-node/contract-state.md)
 * [Additional questions](hop-node/additional-questions.md)
+* [Keystore options](hop-node/keystore-options.md)
 
 ## Subgraphs
 

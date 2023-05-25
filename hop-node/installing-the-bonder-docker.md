@@ -23,3 +23,13 @@ Next, you need to pull the bonder image.
 ```bash
 docker pull hopprotocol/hop-node:mainnet
 ```
+
+## Adding an alias
+
+To conveniently run the bonder process, add the following line to the end of your `~/.bashrc` file. 
+
+```bash
+alias hop='docker run -it -v ~/.hop-node:/root hopprotocol/hop-node:mainnet --config=/root/config.json'
+```
+
+Once that is done, source that file with `source ~/.bashrc`.
