@@ -1,10 +1,10 @@
 ---
-description: Things you can do to secure your server running the Hop Node
+description: Things you can do to secure your server running the Bonder
 ---
 
 # Securing Server
 
-These are some things you can do to secure an Ubuntu server.
+These are a number of things you can do to secure an Ubuntu server.
 
 **These are examples and it's recommended that do your own research to know what's best for your own server.**
 
