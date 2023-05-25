@@ -1,6 +1,6 @@
-# AWS Parameter Store Setup
+# Keystore AWS Parameter Store
 
-
+Follow these steps to set up your keystore passphrase on AWS Parameter Store.
 
 ## Add to parameter store
 
@@ -42,7 +42,7 @@
 
 ## Config
 
-Update your config `~/.hop-node/config.json` to use the password from Paramter Store:
+Update your config `~/.hop-node/config.json` to use the password from Parameter Store:
 
 ```json
 {
