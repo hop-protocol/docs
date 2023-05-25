@@ -18,6 +18,7 @@
 * [Getting started](hop-node/getting-started.md)
 * [Requirements](hop-node/requirements.md)
 * [Configuration](hop-node/configuration.md)
+    * [Keystore](hop-node/keystore.md)
 * [Keystore](hop-node/keystore.md)
 * [Signer](hop-node/signer.md)
 * [Staking](hop-node/staking.md)
