@@ -14,13 +14,11 @@
 
 ## Hop Node
 
-* [Welcome](hop-node/README.md)
-* [Getting started](hop-node/getting-started.md)
+* [Running a Hop Bonder](hop-node/running-a-hop-bonder.md)
 * [Requirements](hop-node/requirements.md)
 * [Configuration](hop-node/configuration.md)
     * [Keystore](hop-node/keystore.md)
-* [Keystore](hop-node/keystore.md)
-* [Signer](hop-node/signer.md)
+        * [Signer](hop-node/signer.md)
 * [Staking](hop-node/staking.md)
 * [Installing Docker](hop-node/installing-docker.md)
 * [Docker image](hop-node/docker.md)
