@@ -15,7 +15,9 @@
 ## Hop Node
 
 * [Running a Hop Bonder](hop-node/running-a-hop-bonder.md)
-* [Requirements](hop-node/requirements.md)
+    * [Bonder Requirements](hop-node/bonder-requirements.md)
+    * [Choosing a Platform](hop-node/choosing-a-platform.md)
+        * [EC2 Setup](hop-node/ec2-setup.md)
 * [Configuration](hop-node/configuration.md)
 * [Keystore](hop-node/keystore.md)
 * [Signer](hop-node/signer.md)
@@ -24,7 +26,6 @@
 * [Docker image](hop-node/docker.md)
 * [Running Docker container](hop-node/running-docker-container.md)
 * [Monitoring](hop-node/monitoring.md)
-* [EC2 Setup](hop-node/ec2-setup.md)
 * [Docker CloudWatch Logs](hop-node/docker-cloudwatch-logs.md)
 * [Prometheus Monitoring](hop-node/prometheus-monitoring.md)
 * [AWS Parameter Store Setup](hop-node/aws-parameter-store-setup.md)
