@@ -53,7 +53,7 @@ Your keystore should now be generated and stored in the default location`~/.hop-
 Creating your keys
 Creating your keystore
 Public address: 0x2c2c2420128945403197a768a39fe5a8fda60f39
-Your keys can be found at: /home/mota/.hop-node/keystore.json
+Your keys can be found at: /home/ubuntu/.hop-node/keystore.json
 
 Keystore generation is complete.
 Press [Enter] to exit.
@@ -68,5 +68,5 @@ You have a few options to store the keystore passphrase. Two options that are sh
 {% endcontent-ref %}
 
 {% content-ref url="keystore-local-passphrase.md" %}
-[Local]](keystore-local-passphrase.md)
+[Local](keystore-local-passphrase.md)
 {% endcontent-ref %}
