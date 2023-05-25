@@ -27,7 +27,7 @@ Docker compose example for Hop Node: `docker-compose.yml`
 version: '3.9'
 
   bonder:
-    image: hopprotocol/hop-node:latest
+    image: hopprotocol/hop-node:mainnet
     command: --config /root/config.json
     env_file:
       - docker.env

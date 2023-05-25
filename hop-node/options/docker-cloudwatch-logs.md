@@ -10,7 +10,7 @@ description: Setting up AWS CloudWatch logging driver for Docker
 {% tab title="docker-compose" %}
 ```yaml
 bonder:
-    image: hopprotocol/hop-node:latest
+    image: hopprotocol/hop-node:mainnet
     command: --config /root/config.json
     env_file:
       - docker.env
@@ -37,7 +37,7 @@ docker run \
   --log-opt awslogs-group="HopNode" \
   --log-opt awslogs-create-group=true \
   --env-file docker.env \
-  -v ~/.hop-node:/root hopprotocol/hop-node:latest \
+  -v ~/.hop-node:/root hopprotocol/hop-node:mainnet \
   --config /root/config.json
 ```
 {% endtab %}
