@@ -11,7 +11,7 @@ Use the `keystore generate` command to generate an encrypted keystore:
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-hop keystore generate --path /root/keystore.json
+hop keystore generate
 ```
 {% endtab %}
 
@@ -47,13 +47,13 @@ Please type mnemonic (separated by spaces) to confirm you have written it down
 : nice grow shine drift recycle survey piano rifle soccer business evidence stand pave belt room size neither volume odor sorry ten flash deliver rack
 ```
 
-Your keystore should now be generated and stored in the default location`~/.hop-node/keystore.json`
+Your keystore should now be generated and stored in the default location`~/.hop/keystore.json`
 
 ```bash
 Creating your keys
 Creating your keystore
 Public address: 0x2c2c2420128945403197a768a39fe5a8fda60f39
-Your keys can be found at: /home/ubuntu/.hop-node/keystore.json
+Your keys can be found at: /home/ubuntu/.hop/keystore.json
 
 Keystore generation is complete.
 Press [Enter] to exit.

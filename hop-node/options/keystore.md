@@ -11,18 +11,18 @@ To use a custom keystore location, use the `-path`  flag:
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-hop keystore generate --path /root/keystore.json
+hop keystore generate --path /my/path/keystore.json
 ```
 {% endtab %}
 
 {% tab title="Node" %}
 ```bash
-hop-node keystore generate --path ~/.hop-node/keystore.json
+hop-node keystore generate --path ~/my/path/keystore.json
 ```
 {% endtab %}
 {% endtabs %}
 
-The default location is `~/.hop-node/keystore.json`
+The default location is `~/.hop/keystore.json`
 
 ### Use an existing private key
 
@@ -31,7 +31,7 @@ You may generate an encrypted keystore using an existing private key by using th
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-hop keystore generate --path /root/keystore.json --private-key=0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d
+hop keystore generate --private-key=0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d
 ```
 {% endtab %}
 
@@ -51,7 +51,7 @@ Use the `keystore decrypt` command to decrypt an encrypted keystore:
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-hop keystore decrypt --path /root/keystore.json
+hop keystore decrypt
 ```
 {% endtab %}
 
@@ -81,7 +81,7 @@ Use the `keystore reencrypt` command to re-encrypt an encrypted keystore with a 
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-hop keystore reencrypt --path /root/keystore.json
+hop keystore reencrypt
 ```
 {% endtab %}
 
@@ -99,7 +99,7 @@ Use the `keystore address` command to print the keystore public address:
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-hop keystore address --path /root/keystore.json
+hop keystore address
 ```
 {% endtab %}
 

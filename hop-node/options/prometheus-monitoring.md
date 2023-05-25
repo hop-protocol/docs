@@ -10,7 +10,7 @@ You can use [Prometheus](https://prometheus.io/) to monitor metrics
 
 ### Enabling metrics
 
-Enable metrics in your hop node config file `~/.hop-node/config.json`
+Enable metrics in your hop node config file `~/.hop/config.json`
 
 ```json
   "metrics": {

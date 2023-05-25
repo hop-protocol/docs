@@ -17,7 +17,7 @@ hop contract-state --token USDC --l1bridge --l2bridge --l2amm --l2ammwrapper
 
 {% tab title="Node" %}
 ```bash
-hop-node contract-state --config ~/.hop-node/config.json --token USDC --l1bridge --l2bridge --l2amm --l2ammwrapper
+hop-node contract-state --token USDC --l1bridge --l2bridge --l2amm --l2ammwrapper
 ```
 {% endtab %}
 {% endtabs %}

@@ -72,13 +72,13 @@ Below is an example of a USDC bonder running on Ethereum, Gnosis, Polygon, Optim
     }
   },
   "db": {
-    "location": "/root/db"
+    "location": "/root/.hop/db"
   },
   "logging": {
     "level": "debug"
   },
   "keystore": {
-    "location": "/root/keystore.json",
+    "location": "/root/.hop/keystore.json",
     "parameterStore": "/Hop/Bonder/Keystore/Pass",
     "awsRegion": "us-east-1"
   },
@@ -232,7 +232,7 @@ Configure options for leveldb database used for caching:
 
 | Key        | Default value    | Description            |
 | ---------- | ---------------- | ---------------------- |
-| `location` | `~/.hop-node/db` | Location for cache db. |
+| `location` | `~/.hop/db`      | Location for cache db. |
 
 ### `logging`
 
@@ -248,10 +248,10 @@ Configure options for keystore:
 
 | Key              | Default value               | Example                     | Description                                        |
 | ---------------- | --------------------------- | --------------------------- | -------------------------------------------------- |
-| `location`       | `~/.hop-node/keystore.json` | `~/.hop-node/keystore.json` | Location of keystore to use.                       |
-| `pass`           |                             | mysecret                    | Passphrase for encrypted keystore.                 |
-| `parameterStore` |                             | /Hop/Bonder/Keystore/Pass   | Use AWS SSM Parameter Store for keystore password. |
-| `awsRegion`      | `us-east-1`                 | `us-east-1`                 | AWS region to use when using SSM Parameter Store.  |
+| `location`       | `~/.hop/keystore.json` | `~/.hop/keystore.json`      | Location of keystore to use.                       |
+| `pass`           |                        | mysecret                    | Passphrase for encrypted keystore.                 |
+| `parameterStore` |                        | /Hop/Bonder/Keystore/Pass   | Use AWS SSM Parameter Store for keystore password. |
+| `awsRegion`      | `us-east-1`            | `us-east-1`                 | AWS region to use when using SSM Parameter Store.  |
 
 {% content-ref url="keystore.md" %}
 [keystore.md](keystore.md)
@@ -376,11 +376,11 @@ Using local blocklist file of addresses:
 
 ```json
 "blocklist": {
-  "path": "/root/blocklist.txt"
+  "path": "/root/.hop/blocklist.txt"
 }
 ```
 
-Using remote blocklist file of adddresses:
+Using remote blocklist file of addresses:
 
 ```json
 "blocklist": {

@@ -38,7 +38,6 @@
         * [Docker CloudWatch Logs](hop-node/options/docker-cloudwatch-logs.md)
         * [Prometheus](hop-node/options/prometheus-monitoring.md)
     * [Running Docker Container Options](hop-node/options/running-docker-container.md)
-    * [Running on Kubernetes](hop-node/options/running-docker-container.md)
     * [Contract State](hop-node/options/contract-state.md)
 * [Resources and Best Practices](hop-node/resources/resources-and-best-practices.md)
     * [Securing Cloud Instance](hop-node/resources/securing-cloud-instance.md)

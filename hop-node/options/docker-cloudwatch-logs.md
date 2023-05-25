@@ -11,12 +11,11 @@ description: Setting up AWS CloudWatch logging driver for Docker
 ```yaml
 bonder:
     image: hopprotocol/hop-node:mainnet
-    command: --config /root/config.json
     env_file:
       - docker.env
     restart: unless-stopped
     volumes:
-        - /home/ubuntu/.hop-node:/root
+        - /home/ubuntu/.hop:/root/.hop
     logging:
       driver: awslogs
       options:
@@ -37,8 +36,8 @@ docker run \
   --log-opt awslogs-group="HopNode" \
   --log-opt awslogs-create-group=true \
   --env-file docker.env \
-  -v ~/.hop-node:/root hopprotocol/hop-node:mainnet \
-  --config /root/config.json
+  -v ~/.hop:/root/.hop \
+  hopprotocol/hop-node:mainnet
 ```
 {% endtab %}
 {% endtabs %}

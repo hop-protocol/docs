@@ -29,7 +29,7 @@ docker pull hopprotocol/hop-node:mainnet
 To conveniently run the bonder process, add the following line to the end of your `~/.bashrc` file. 
 
 ```bash
-alias hop='docker run -it -v ~/.hop-node:/root hopprotocol/hop-node:mainnet --config=/root/config.json'
+alias hop='docker run -it -v ~/.hop:/root/.hop hopprotocol/hop-node:mainnet'
 ```
 
 Once that is done, source that file with `source ~/.bashrc`.
