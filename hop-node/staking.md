@@ -1,8 +1,11 @@
 # Staking
 
-### Stake command
+You can now stake your funds on the Hop bridge in order to start bonding transfers! Ensure the token you are staking has been sent to the bonder on Ethereum. Additionally, you should have sent funds for gas to the bonder address on each chain.
 
-Add liquidity for bonding transfers.
+_**Note**: Currently Bonders must be allowed by the Hop Bridge smart contract. If you are not allowed, you will not be able to stake._
+
+
+To start staking, you can simply run the stake commands and specify the chain, token, and amount you want to stake. 
 
 Example: Stake on 100 USDC on Arbitrum
 
@@ -20,53 +23,6 @@ hop-node stake --chain=arbitrum --token=USDC --amount=100
 {% endtab %}
 {% endtabs %}
 
-### Unstake command
-
-Remove liquidity any unused liquidity
-
-Example: Unstake on 100 USDC on Arbitrum
-
-{% tabs %}
-{% tab title="Docker" %}
-```bash
-hop unstake --chain=arbitrum --token=USDC --amount=100
-```
-{% endtab %}
-
-{% tab title="Node" %}
-```bash
-hop-node unstake --chain=arbitrum --token=USDC --amount=100
-```
-{% endtab %}
-{% endtabs %}
-
-### Stake status command
-
-Show staked amounts as credit and debit balances
-
-Example: Show USDC amount staked on Arbitrum
-
-{% tabs %}
-{% tab title="Docker" %}
-```bash
-hop stake-status --chain=arbitrum --token=USDC
-```
-{% endtab %}
-
-{% tab title="Node" %}
-```bash
-hop-node stake-status --chain=arbitrum --token=USDC
-```
-{% endtab %}
-{% endtabs %}
-
-### Stake options
-
-| Argument | Example    | Description                                                                                                                                                                                                         |
-| -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chain`  | `arbitrum` | <p>Chain to stake hTokens on. On Layer-1, canonical tokens are staked.</p><p></p><p>Options are: <code>ethereum</code>, <code>arbitrum</code>, <code>optimism</code>, <code>polygon</code>, <code>gnosis</code></p> |
-| `token`  | `USDC`     | <p>Asset to stake for.</p><p></p><p>Options are: <code>USDC</code>, <code>USDT</code>, <code>DAI</code>, <code>MATIC</code>, <code>ETH</code></p>                                                                   |
-| `amount` | `15000`    | Amount to stake, in human readable format. Example: `--amount=100` is exactly `100` USDC                                                                                                                            |
 
 ### Notes
 

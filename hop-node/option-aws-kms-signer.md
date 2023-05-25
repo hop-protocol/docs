@@ -1,5 +1,5 @@
 ---
-description: Hop Node signer documentation
+description: Bonder AWS KMS signer documentation
 ---
 
 # Signer

@@ -4,7 +4,7 @@ description: Monitor your Hop Node
 
 # Monitoring
 
-Here are some ways you can monitor the Hop Node:
+Here are some ways you can monitor the bonder:
 
 ### CloudWatch Logs
 
