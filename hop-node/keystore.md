@@ -68,5 +68,5 @@ You have a few options to store the keystore passphrase. Two options that are sh
 {% endcontent-ref %}
 
 {% content-ref url="keystore-local-passphrase.md" %}
-[Local](keystore-local-passphrase.md)
+[keystore-local-passphrase.md](keystore-local-passphrase.md)
 {% endcontent-ref %}

@@ -11,7 +11,7 @@ See all the commands available with the help flag:
 {% tabs %}
 {% tab title="Docker" %}
 ```bash
-docker run -v ~/.hop-node:/root hopprotocol/hop-node --help
+hop --help
 ```
 {% endtab %}
 
