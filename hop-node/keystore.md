@@ -63,10 +63,10 @@ Press [Enter] to exit.
 
 You have a few options to store the keystore passphrase. Two options that are shown below are to use AWS Parameter Store (recommended) or storing it on the server itself. Either option is acceptable, as is anything else you are comfortable with.
 
-{% content-ref url="keystore-aws-parameter-store-setup.md" %}
-[keystore-aws-parameter-store-setup.md](keystore-aws-parameter-store-setup.md)
+{% content-ref url="keystore-aws-parameter-store.md" %}
+[keystore-aws-parameter-store.md](keystore-aws-parameter-store.md)
 {% endcontent-ref %}
 
 {% content-ref url="keystore-local-passphrase.md" %}
-[keystore-local-passphrase.md](keystore-local-passphrase.md)
+[Local]](keystore-local-passphrase.md)
 {% endcontent-ref %}
