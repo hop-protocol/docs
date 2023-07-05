@@ -2,7 +2,7 @@
 description: Testing the Bonder
 ---
 
-You are now ready to test the bonder! Follow the instructions to test that the bonder client is correctly set up! This test will send a tx to yourself on the Ethereum mainnet to validate that your bonder can transact. It will then stake and unstake the token on the Ethereum mainnet.
+You are now ready to test the bonder! Follow the instructions to test that the bonder client is correctly set up! This test will send a transaction to yourself on the Ethereum mainnet to validate that your bonder can transact. It will then stake and unstake the token on the Ethereum mainnet.
 
 ## Send Funds to the Bonder Address
 
