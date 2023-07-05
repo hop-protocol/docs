@@ -96,7 +96,7 @@ Transfers out of rollup A are merklelized into a "Transfer Root". The Transfer R
 
 ## How do I become a Bonder?
 
-Currently Bonders must be allowed by the Hop Bridge smart contract governed by the Hop team. We are working on decentralizing the Bonder role completely. Reach out to the Hop team on discord if you are interested in becoming a Bonder.
+Currently Bonders must be allowed by the Hop Bridge smart contract governed by the Hop team. We are working on decentralizing the Bonder role completely. Reach out to the Hop team on Discord if you are interested in becoming a Bonder.
 
 ## Do I need to expose any ports for the Hop Node?
 

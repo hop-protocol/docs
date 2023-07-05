@@ -2,12 +2,6 @@
 description: Running the Bonder
 ---
 
-You are now ready to run the bonder! Follow the instructions to start the bonder client! Simply run the following command and your bonder should be up and running.
+_**Notice:** Your bonder address must be added to the onchain contracts before running these steps. Reach out to the Hop community on Discord if you are interested on becoming a bonder._
 
-```bash
-hop
-```
-
-To verify the bonder is running correctly, you can take a look at the logs by running:
-
-`docker logs --follow hop-node`
+You are now ready to run the bonder! Follow the instructions to start the bonder client! Simply follow the remaining steps and your bonder should be up and running.
