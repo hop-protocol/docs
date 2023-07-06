@@ -16,4 +16,4 @@ You must start by sending funds to the bonder address. Since this is a test, you
 hop self-test --token <YOUR_TOKEN> --amount 1
 ```
 
-If the test is successful, you will see logs that describe the transactions made.
+This test will take approximately 1 minute. If the test is successful, you will see logs that describe the transactions made.
