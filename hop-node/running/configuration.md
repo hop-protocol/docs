@@ -136,7 +136,7 @@ Below is an example of a USDC bonder running on Ethereum, Gnosis, Polygon, Optim
 
 | Key               | Value                                                                                                                 |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `network`         | The Ethereum network to use. (e.g. "_mainnet_', "_kovan_", "_goerli_")                                                |
+| `network`         | The Ethereum network to use. (e.g. "_mainnet_', "_goerli_")                                                           |
 | `chains`          | Chain configuration such as RPC URLs and max gas prices to use. See chains section below for details.                 |
 | `tokens`          | List of tokens and their bridges that bonder will interact with. See tokens section below for details.                |
 | `routes`          | Desired routes to bond withdrawals.                                                                                   |

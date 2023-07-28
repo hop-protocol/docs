@@ -642,6 +642,8 @@ hop.setChainProviders({
   gnosis: new providers.StaticJsonRpcProvider('https://rpc.gnosischain.com'),
   optimism: new providers.StaticJsonRpcProvider('https://mainnet.optimism.io'),
   arbitrum: new providers.StaticJsonRpcProvider('https://arb1.arbitrum.io/rpc'),
+  nova: new providers.StaticJsonRpcProvider('https://nova.arbitrum.io/rpc)'),
+  base: new providers.StaticJsonRpcProvider('https://goerli.base.org')
 })
 ```
 

@@ -149,6 +149,8 @@ Input query parameters:
 | `rpcUrl[arbitrum]` | (optional) Arbitrum RPC url (eg. rpcUrl\[arbitrum]=https://arb1.arbitrum.io/rpc)                                  |
 | `rpcUrl[polygon]`  | (optional) Polygon RPC url (eg. rpcUrl\[polygon]=https://polygon-rpc.com)                                         |
 | `rpcUrl[gnosis]`   | (optional) Gnosis Chain RPC url (eg. rpcUrl\[gnosis]=https://rpc.gnosischain.com)                                 |
+| `rpcUrl[nova]`     | (optional) Nova RPC url (eg. rpcUrl\[nova]=https://nova.arbitrum.io/rpc)                                          |
+| `rpcUrl[base]`     | (optional) Base RPC url (eg. rpcUrl\[base]=https://goerli.base.org)                                               |
 
 Example request
 

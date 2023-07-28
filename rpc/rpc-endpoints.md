@@ -78,39 +78,26 @@ Chain ID: `42161`
 
 Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
-## Kovan
+### Nova
 
-### Ethereum (Kovan)
+Chain ID: `42170`
 
-Chain ID: `42`
+| URL                                          |
+| -------------------------------------------- |
+| `https://nova.arbitrum.io/rpc`              |
+| `https://arbitrum-nova.public.blastapi.io `  |
 
-| URL                                                           |
-| ------------------------------------------------------------- |
-| `https://kovan.infura.io/v3/84842078b09946638c03157f83405213` |
+Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
-### Gnosis Chain (formerly xDai) Kovan
+### Base
 
-Chain ID: `77`
+Chain ID: `8453`
 
-| URL                         |
-| --------------------------- |
-| `https://sokol.poa.network` |
+| URL                        |
+| -------------------------- |
+| `https://mainnet.base.org` |
 
-### Optimism (Kovan)
-
-Chain ID: `69`
-
-| URL                         |
-| --------------------------- |
-| `https://kovan.optimism.io` |
-
-### Arbitrum (Kovan)
-
-Arbitrum is not supported on Kovan
-
-### Polygon (Kovan)
-
-Polygon is not supported on Kovan
+Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
 ## Goerli
 
@@ -147,3 +134,9 @@ Gnosis Chain is not supported on Goerli
 | URL                            |
 | ------------------------------ |
 | `https://arb1.arbitrum.io/rpc` |
+
+### Base (Goerli)
+
+| URL                       |
+| ------------------------- |
+| `https://goerli.base.org` |
