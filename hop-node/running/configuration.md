@@ -175,9 +175,11 @@ Chain slug options:
 | ---------- | ---------------------------- |
 | `ethereum` | Ethereum                     |
 | `gnosis`   | Gnosis Chain (formerly xDai) |
-| `arbitrum` | Arbitrum                     |
+| `arbitrum` | Arbitrum One                 |
 | `optimism` | Optimism                     |
 | `polygon`  | Polygon (formerly Matic)     |
+| `nova`     | Arbitrum Nova                |
+| `base`     | Base                         |
 
 
 ### `tokens`
