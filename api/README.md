@@ -134,6 +134,54 @@ Output response:
 | `token`                | Token symbol of asset bridged                                                                                                        |
 | `timestamp`            | Unix timestamp of origin transfer transaction                                                                                        |
 
+## GET /v1/available-routes
+
+> Get available routes
+
+Input query parameters:
+
+| Parameters     | Description                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| `network`      | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet |
+
+Example request
+
+```
+curl "https://api.hop.exchange/v1/available-routes"
+```
+
+Example response
+
+```json
+[
+  {
+    "token": "USDC",
+    "sourceChain": "ethereum",
+    "sourceChainId": 1,
+    "destinationChain": "gnosis",
+    "destinationChainId": 100
+  },
+  {
+    "token": "ETH",
+    "sourceChain": "base",
+    "sourceChainId": 8453,
+    "destinationChain": "arbitrum",
+    "destinationChainId": 42161
+  },
+  ...
+]
+```
+
+Output response:
+
+| Parameters             | Description                                                                                                                          |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `token`                | Token Symbol
+| `sourceChainSlug`      | Source chain slug
+| `sourceChainId`        | Source chain ID
+| `destinationChainSlug` | Destination chain slug
+| `destinationChainId`   | Destination chain ID
+
 ## Using custom RPC providers
 
 You can set query parameter to specify what RPC url to use for a chain.
