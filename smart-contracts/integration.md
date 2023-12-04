@@ -72,7 +72,7 @@ When sending native asset from source chain (ie ETH on Ethereum, Optimism, Arbit
 
 swapAndSend is what you'd want to use most of the time since the canonical tokens are what users are interested in.
 
-### Calling Hop from smart contract
+### Calling Hop from smart contract for transfers
 
 Some good examples you can check out as a reference are:
 
@@ -80,9 +80,34 @@ Some good examples you can check out as a reference are:
 * [movr](https://www.movr.network/) bridge aggregator contracts ([Hop.sol](https://polygonscan.com/address/0x2b42AFFD4b7C14d9B7C2579229495c052672Ccd3#code))
 * [LI.FI](https://li.fi/) bridge aggregator contracts ([HopFacet.sol](https://polygonscan.com/address/0xc46304a0b2accc4462d9bdcaa0f6bf632510d617#code))
 
+## AMM Deposit
+
+Use the [`addLiquidity`](https://github.com/hop-protocol/contracts/blob/156dc60557349da9fe0785c369ab3fda0bf01288/contracts/saddle/Swap.sol#L406C23-L406C23) method on the Swap contract.
+
+```solidity
+Swap.addLiquidity(
+    amounts, // array of amounts of tokens to LP, should be an array of 2 elements containing the amount of canonical tokens and h-tokens, e.g. ['100000000', '0'],
+    minToMint, // min amount of LP tokens to receive,
+    deadline // e.g. use 10 minutes from now in unix seconds
+)
+```
+
+## AMM Withdraw
+
+```solidity
+Swap.removeLiquidityOneToken(
+    tokenAmount, // amount of LP tokens to burn
+    tokenIndex, // token to receive; use 0 for canonical token, use 1 for h-token
+    minAmount, // minimum amount to receive
+    deadline // e.g. use 10 minutes from now in unix seconds
+)
+```
+
+Use the [`removeLiquidityOneToken`](https://github.com/hop-protocol/contracts/blob/156dc60557349da9fe0785c369ab3fda0bf01288/contracts/saddle/Swap.sol#L447) method on the Swap contract. You can also use the [`removeLiquidity`](https://github.com/hop-protocol/contracts/blob/156dc60557349da9fe0785c369ab3fda0bf01288/contracts/saddle/Swap.sol#L430C14-L430C29) method to receive proportional canonical tokens and h-tokens.
+
 ### Contract addresses
 
-The L1 Bridge addresses, L2 Bridge addresses, L2 AMM wrapper addresses, and other Hop contract addresses can be found on this link:
+The L1 Bridge addresses, L2 Bridge addresses, L2 AMM wrapper addresses, AMM addresses (Saddle Swap contracts), and other Hop contract addresses can be found on this link:
 
 {% content-ref url="../contract-addresses.md" %}
 [contract-addresses.md](../contract-addresses.md)
