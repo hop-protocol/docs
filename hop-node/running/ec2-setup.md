@@ -14,16 +14,12 @@ Create an EC2 instance to run your Hop Node
 2. Sign into your AWS account
 3. In the "_services_" search bar, type "EC2" and click on the first result
 4. Click "Launch Instance"
-5. Select "_Ubuntu Server 20.04 LTS (HVM), SSD Volume Type_"
+5. Select "_Ubuntu Server 22.04 LTS (HVM), SSD Volume Type_"
 6. Search for the instance type "m5.large" and select this instance
-7. Click "_Next: Configure Instance Details"_
-8. Click "_Next: Add Storage"_
-9. In the "_Size (GiB)"_ column, use "100" instead of the default "8"
-10. Click "_Review and Launch_"
-11. Click "_Launch_"
-12. Select "_Create a new key pair_" and name it "hop-node"
-13. Click "_Download Key Pair_" and save the _.pem_ file on your machine
-14. Click "_Launch Instances_"
+7. In "_Key pair (login)_" specify the key you want to use for SSH
+8. In "_Configure Storage_", use 100GB and choose `gp3`.
+9. Click "_Launch instance_"
+10. Click "_Launch Instances_"
 
 #### In the Terminal on your local machine
 
