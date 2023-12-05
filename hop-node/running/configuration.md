@@ -21,18 +21,22 @@ Below is an example of a USDC bonder running on Ethereum, Gnosis, Polygon, Optim
     },
     "gnosis": {
       "rpcUrl": "https://rpc.gnosischain.com",
+      "customSyncType": "threshold",
       "maxGasPrice": 90
     },
     "polygon": {
       "rpcUrl": "https://polygon-rpc.com",
+      "customSyncType": "threshold",
       "maxGasPrice": 5000
     },
     "optimism": {
       "rpcUrl": "https://mainnet.optimism.io",
+      "customSyncType": "threshold",
       "maxGasPrice": 500
     },
     "arbitrum": {
       "rpcUrl": "https://arb1.arbitrum.io/rpc",
+      "customSyncType": "threshold",
       "maxGasPrice": 500
     }
   },
@@ -162,7 +166,8 @@ _Note: If the selected network doesn't support a chain, it will be ignored._
 "chains": {
   "<chain-slug>": {
     "rpcUrl": "<chain-rpc-url>",
-    "maxGasPrice": "<max-gas-price>a",
+    "customSyncType": "<custom-sync-type", // Not applicable if `chain-slug` is `ethereum`
+    "maxGasPrice": "<max-gas-price>",
     "redundantRpcUrls": ["<chain-rpc-url>, ..."]
   },
   ...
@@ -180,6 +185,7 @@ Chain slug options:
 | `polygon`  | Polygon (formerly Matic)     |
 | `nova`     | Arbitrum Nova                |
 | `base`     | Base                         |
+| `linea`    | Linea                        |
 
 
 ### `tokens`

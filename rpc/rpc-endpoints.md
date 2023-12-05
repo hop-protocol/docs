@@ -99,6 +99,16 @@ Chain ID: `8453`
 
 Using an [Alchemy](https://www.alchemy.com/) RPC url is recommended instead of the public url. [Set up here](https://dashboard.alchemyapi.io/).
 
+### Linea
+
+Chain ID: `59144`
+
+| URL                        |
+| -------------------------- |
+| `https://rpc.linea.build`  |
+
+Using an [Infura](https://www.infura.io/) RPC url is recommended instead of the public url. [Set up here](https://app.infura.io/register).
+
 ## Goerli
 
 ### Ethereum (Goerli)
@@ -129,14 +139,16 @@ Gnosis Chain is not supported on Goerli
 | `https://rpc.ankr.com/optimism_testnet` |
 | `https://goerli.optimism.io` |
 
-### Arbitrum (Goerli)
-
-| URL                            |
-| ------------------------------ |
-| `https://arb1.arbitrum.io/rpc` |
-
 ### Base (Goerli)
 
 | URL                       |
 | ------------------------- |
 | `https://goerli.base.org` |
+
+### Linea (Goerli)
+
+Chain ID: `59140`
+
+| URL                               |
+| --------------------------------- |
+| `https://rpc.goerli.linea.build`  |
