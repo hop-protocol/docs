@@ -382,34 +382,6 @@ if (allowance.lt(transferAmount)) {
 // ...
 ```
 
-### Send tokens over canonical bridge (deprecated)
-
-#### Deposit tokens using canonical bridge (L1 -> L2) (deprecated):
-
-```javascript
-import { Hop, Chain } from '@hop-protocol/sdk'
-
-const hop = new Hop('mainnet')
-const bridge = hop.connect(signer).canonicalBridge('USDC', Chain.Gnosis)
-
-// send 1 USDC tokens from Ethereum -> Gnosis
-const tx = await bridge.deposit('100000000')
-console.log(tx.hash)
-```
-
-#### Withdraw tokens using canonical bridge (L2 -> L1) (deprecated):
-
-```javascript
-import { Hop, Chain } from '@hop-protocol/sdk'
-
-const hop = new Hop('mainnet')
-const bridge = hop.connect(signer).canonicalBridge('USDC', Chain.Gnosis)
-
-// send 100 USDC tokens from Gnosis -> Ethereum
-const tx = await bridge.withdraw('100000000')
-console.log(tx.hash)
-```
-
 ### Estimate tokens amount out from swap
 
 Call this to estimate how many tokens the swap will provide (does not take account slippage or bonder fee):
