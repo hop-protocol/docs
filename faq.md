@@ -80,7 +80,7 @@ When bonder is offline then a fallback bonder will bond the transfers. If there 
 
 ## What rollups does Hop Protocol support?
 
-Supported rollups on mainnet are xDai, Polygon (formerly Matic), and soon will support Optimism, and Arbitrum.
+Supported rollups on mainnet are Gnosis, Polygon (formerly), Optimism, Arbitrum One, Base, Arbitrum Nova, and Linea.
 
 ## What happens when I "send" tokens from rollup A to rollup B?
 
