@@ -74,7 +74,7 @@ sudo vim /etc/ssh/sshd_config
 Make sure to have these settings enabled
 
 ```bash
-ChallengeResponseAuthentication yes # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
+KbdInteractiveAuthentication yes # This is called `ChallengeResponseAuthentication` in versions prior to Ubuntu 22.04
 UsePAM yes
 ```
 
