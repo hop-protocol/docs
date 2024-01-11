@@ -20,7 +20,7 @@ sendToL2(
 )
 ```
 
-The `relayer` and `relayerFee` is only used if a 3rd party is relaying the transfer on the user's behalf (ie the relayer is paying for transaction fee). You can set the `relayer` to the zero address and `relayerFee` to `0` if you are not using a relayer (majority of integrations do not use a relayer).
+The `relayer` and `relayerFee` are _**required**_ for most routes. You can get these values from the Hop SDK.
 
 ### L2->L1 and L2->L2
 
