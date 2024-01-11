@@ -176,16 +176,17 @@ _Note: If the selected network doesn't support a chain, it will be ignored._
 
 Chain slug options:
 
-| Chain slug | Description                  |
-| ---------- | ---------------------------- |
-| `ethereum` | Ethereum                     |
-| `gnosis`   | Gnosis Chain (formerly xDai) |
-| `arbitrum` | Arbitrum One                 |
-| `optimism` | Optimism                     |
-| `polygon`  | Polygon (formerly Matic)     |
-| `nova`     | Arbitrum Nova                |
-| `base`     | Base                         |
-| `linea`    | Linea                        |
+| Chain slug  | Description                  |
+| ----------- | ---------------------------- |
+| `ethereum`  | Ethereum                     |
+| `gnosis`    | Gnosis Chain (formerly xDai) |
+| `arbitrum`  | Arbitrum One                 |
+| `optimism`  | Optimism                     |
+| `polygon`   | Polygon (formerly Matic)     |
+| `nova`      | Arbitrum Nova                |
+| `base`      | Base                         |
+| `linea`     | Linea                        |
+| `polygonzk` | Polygon zkEVM                |
 
 
 ### `tokens`
