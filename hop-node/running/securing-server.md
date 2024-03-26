@@ -2,7 +2,7 @@
 description: Things you can do to secure your server running the Bonder
 ---
 
-# Securing Server
+# Securing your Server
 
 These are a number of things you can do to secure an Ubuntu server.
 
@@ -56,11 +56,11 @@ In `sshd_config` file, make sure to have the following settings:
 PermitRootLogin no
 PasswordAuthentication no
 PermitEmptyPasswords no
-ChallengeResponseAuthentication no # This has been replaced by KbdInteractiveAuthentication in Ubuntu 22.04 and later
+KbdInteractiveAuthentication no # This is called `ChallengeResponseAuthentication` in versions prior to Ubuntu 22.04
 X11Forwarding no
 ```
 
-**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 through 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
+**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 through 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List\_of\_TCP\_and\_UDP\_port\_numbers).
 
 ```bash
 Port <port number>

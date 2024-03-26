@@ -8,6 +8,10 @@ description: Smart contract integration
 
 To send funds L1->L2, call the `sendToL2` [method](https://github.com/hop-protocol/contracts/blob/8cefc3975115b6e3e706dd110670badad954a3bd/contracts/bridges/L1\_Bridge.sol#L109) on the L1 Bridge contract:
 
+{% hint style="info" %}
+The `relayer` and `relayerFee` are _**required**_ for most routes. You can get these values from the Hop SDK.
+{% endhint %}
+
 ```solidity
 sendToL2(
     uint256 chainId,
@@ -19,8 +23,6 @@ sendToL2(
     uint256 relayerFee
 )
 ```
-
-The `relayer` and `relayerFee` is only used if a 3rd party is relaying the transfer on the user's behalf (ie the relayer is paying for transaction fee). You can set the `relayer` to the zero address and `relayerFee` to `0` if you are not using a relayer (majority of integrations do not use a relayer).
 
 ### L2->L1 and L2->L2
 
