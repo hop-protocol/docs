@@ -30,7 +30,7 @@ Chain options are: `ethereum`, `optimism`, `arbitrum`, `polygon`, `gnosis`
 Example request
 
 ```bash
-curl "https://api.hop.exchange/v1/quote?amount=1000000&token=USDC&fromChain=polygon&toChain=gnosis&slippage=0.5"
+curl "https://api.hop.exchange/v1/quote?amount=1000000&token=USDC&fromChain=optimism&toChain=arbitrum&slippage=0.5"
 ```
 
 Example response
@@ -203,7 +203,7 @@ Input query parameters:
 Example request
 
 ```bash
-curl -g "https://api.hop.exchange/v1/quote?amount=1000000&token=USDC&fromChain=polygon&toChain=gnosis&slippage=0.5&rpcUrl[polygon]=https://polygon-rpc.com&rpcUrl[gnosis]=https://rpc.gnosischain.com"
+curl -g "https://api.hop.exchange/v1/quote?amount=1000000&token=USDC&fromChain=polygon&toChain=optimism&slippage=0.5&rpcUrl[polygon]=https://polygon-rpc.com&rpcUrl[gnosis]=https://mainnet.optimism.io"
 ```
 
 ## Source code
