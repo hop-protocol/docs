@@ -25,7 +25,7 @@ Input query parameters:
 | `slippage`  | (required) Slippage percentage (eg. `slippage=0.5` which is 0.5%)                                                |
 | `network`   | (optional) Ethereum network to use. Options are `mainnet` (default), `goerli` for testnet (eg. `network=goerli`) |
 
-Chain options are: `ethereum`, `optimism`, `arbitrum`, `polygon`, `gnosis`
+Chain options are: `ethereum`, `optimism`, `arbitrum`, `polygon`, `gnosis`, `nova`, `base`
 
 Example request
 
@@ -158,7 +158,7 @@ Example response
     "token": "USDC",
     "sourceChain": "ethereum",
     "sourceChainId": 1,
-    "destinationChain": "gnosis",
+    "destinationChain": "optimism",
     "destinationChainId": 100
   },
   {
