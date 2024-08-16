@@ -78,7 +78,7 @@ KbdInteractiveAuthentication yes # This is called `ChallengeResponseAuthenticati
 UsePAM yes
 ```
 
-Add to bottom of `sshd_config` file
+At the bottom of the file, add a new line to require both the SSH key as well as the 2FA code when accessing the server.
 
 ```bash
 AuthenticationMethods publickey,keyboard-interactive:pam
@@ -87,39 +87,7 @@ AuthenticationMethods publickey,keyboard-interactive:pam
 Restart SSH service
 
 ```bash
-sudo systemctl restart sshd.service
+sudo service ssh reload
 ```
 
-## Disable Google Authenticator
-
-{% hint style="info" %}
-These steps are not meant to be executed during server setup. These are meant as instructions in the event that you want to disable the Google Authenticator.
-{% endhint %}
-
-```bash
-sudo vim /etc/pam.d/sshd
-```
-
-Comment these lines so it looks like this
-
-```
-# auth required pam_google_authenticator.so
-```
-
-Update SSH
-
-```bash
-sudo vim /etc/ssh/sshd_config
-```
-
-Change `AuthenticationMethods` to only allow `publickey`
-
-```bash
-AuthenticationMethods publickey
-```
-
-Restart SSH service
-
-```bash
-sudo systemctl restart sshd.service
-```
+Google Authenticator setup is now compete! If you want to disable it at a later time, undo the steps above that modify the `/etc/pam.d/sshd` and `/etc/ssh/sshd_config` files. Ensure you reload the `ssh` service after modification.

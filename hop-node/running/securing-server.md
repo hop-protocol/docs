@@ -2,6 +2,10 @@
 description: Things you can do to secure your server running the Bonder
 ---
 
+{% hint style="info" %}
+Please note that this guide is written for Ubuntu 24.04 and applies to the currently maintained Ubuntu releases.
+{% endhint %}
+
 # Securing your Server
 
 These are a number of things you can do to secure an Ubuntu server.
@@ -17,29 +21,12 @@ sudo apt update -y && sudo apt full-upgrade -y
 sudo apt autoremove -y && sudo apt autoclean
 ```
 
-### Create new user instead of using default user
+### Set up user configs
 
-Create a non-root user with sudo privileges
-
+Disable the `root` user account and set a password for your account
 ```bash
-sudo useradd -m -s /bin/bash alice
-sudo passwd alice
-sudo usermod -aG sudo alice
-```
-
-Copy authorized SSH hosts to new user
-
-```bash
-su - alice
-sudo cp -r /home/ubuntu/.ssh .ssh
-sudo chown -R alice:alice .ssh
-```
-
-End your current session and SSH into the new user and delete default user
-
-```bash
-pkill -u ubuntu
-sudo userdel -r -f ubuntu
+sudo passwd -l root
+sudo passwd ubuntu
 ```
 
 ### Harden SSH config
@@ -50,55 +37,32 @@ Edit SSH configuration
 sudo vim /etc/ssh/sshd_config
 ```
 
-In `sshd_config` file, make sure to have the following settings:
+In `sshd_config` file, update the values below or ensure that they are already set to these values.
 
 ```bash
 PermitRootLogin no
+PubkeyAuthentication yes
 PasswordAuthentication no
 PermitEmptyPasswords no
-KbdInteractiveAuthentication no # This is called `ChallengeResponseAuthentication` in versions prior to Ubuntu 22.04
+KbdInteractiveAuthentication no # In versions prior to Ubuntu 22.04, this is called `ChallengeResponseAuthentication`
 X11Forwarding no
 ```
 
-**Optional**: Locate Port and customize it your random port. Use a random port # from 1024 through 49141. [Check for possible conflicts](https://en.wikipedia.org/wiki/List\_of\_TCP\_and\_UDP\_port\_numbers).
+At the bottom of the file, add a new line to allow only your user to access the server.
 
 ```bash
-Port <port number>
+AllowUsers ubuntu
 ```
 
 Verify changes and reload service
 
 ```bash
-sudo sshd -t
-sudo service ssh reload
-```
-
-### Only allow specific users for SSH
-
-Edit SSH configuration
-
-```bash
-sudo vim /etc/ssh/sshd_config
-```
-
-Edit or add `AllowUsers` with space separated usernames
-
-```
-AllowUsers alice
-```
-
-Reload SSH service
-
-```
+sudo sshd -t # Only run this in Ubuntu 22.04 and prior. Ubuntu 24.04 and later versions removed this.
 sudo service ssh reload
 ```
 
 ### Disable root account
 
-Disabling the `root` user account is a good idea
-
-```bash
-sudo passwd -l root
 ```
 
 ### Install fail2ban
@@ -106,7 +70,6 @@ sudo passwd -l root
 Installing fail2ban will block out anyone who fails to repeatedly log in
 
 ```bash
-sudo apt update
 sudo apt install fail2ban -y
 ```
 
@@ -141,14 +104,10 @@ All incoming connections can be disallowed. Only outgoing connections need to be
 For example, if using [UFW](securing-server.md#create-new-user-instead-of-using-default-user)
 
 ```bash
-systemctl start ufw.service
-systemctl enable ufw.service
-
-sudo ufw default deny
-sudo ufw allow "<22 or your random port number>/tcp" comment "Allow SSH"
-sudo ufw disable
-sudo ufw enable
-sudo ufw status
+sudo ufw default deny incoming
+sudo ufw allow 22 comment "Allow SSH"
+sudo systemctl restart ufw.service
+sudo systemctl enable ufw.service
 ```
 
 ### Add SSH 2FA
