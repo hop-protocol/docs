@@ -62,10 +62,6 @@ Verify changes and reload service
 sudo systemctl restart ssh.socket # If you are on a version prior to 24.04, run `sudo service ssh reload` instead
 ```
 
-### Disable root account
-
-```
-
 ### Install fail2ban
 
 Installing fail2ban will block out anyone who fails to repeatedly log in
