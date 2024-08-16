@@ -3,14 +3,16 @@ description: Things you can do to secure your server running the Bonder
 ---
 
 {% hint style="info" %}
-Please note that this guide is written for Ubuntu 24.04 and applies to the currently maintained Ubuntu releases.
+Please note that this guide is written for Ubuntu 24.04. It also applies to all of the currently maintained Ubuntu releases.
 {% endhint %}
 
 # Securing your Server
 
 These are a number of things you can do to secure an Ubuntu server.
 
+{% hint style="info" %}
 **These are examples and it's recommended that do your own research to know what's best for your own server.**
+{% endhint %}
 
 ### Update your system
 
@@ -57,8 +59,7 @@ AllowUsers ubuntu
 Verify changes and reload service
 
 ```bash
-sudo sshd -t # Only run this in Ubuntu 22.04 and prior. Ubuntu 24.04 and later versions removed this.
-sudo service ssh reload
+sudo systemctl restart ssh.socket # If you are on a version prior to 24.04, run `sudo service ssh reload` instead
 ```
 
 ### Disable root account
@@ -108,6 +109,14 @@ sudo ufw default deny incoming
 sudo ufw allow 22 comment "Allow SSH"
 sudo systemctl restart ufw.service
 sudo systemctl enable ufw.service
+```
+
+### Reset the server
+
+The base configuration is now set up and enabled. Restart the server now to complete the update and upgrade of packages and associated config.
+
+```bash
+sudo reboot
 ```
 
 ### Add SSH 2FA

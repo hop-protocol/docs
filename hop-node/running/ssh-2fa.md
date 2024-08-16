@@ -87,7 +87,7 @@ AuthenticationMethods publickey,keyboard-interactive:pam
 Restart SSH service
 
 ```bash
-sudo service ssh reload
+sudo systemctl restart ssh.socket # If you are on a version prior to 24.04, run `sudo service ssh reload` instead
 ```
 
 Google Authenticator setup is now compete! If you want to disable it at a later time, undo the steps above that modify the `/etc/pam.d/sshd` and `/etc/ssh/sshd_config` files. Ensure you reload the `ssh` service after modification.
