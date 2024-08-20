@@ -6,7 +6,7 @@ description: All Hop contract addresses
 
 The live mainnet Hop contract addresses can be found in the link below:
 
-{% embed url="https://github.com/hop-protocol/hop/blob/develop/packages/core/src/addresses/mainnet.ts" %}
+{% embed url="https://github.com/hop-protocol/hop/blob/develop/packages/sdk/src/addresses/mainnet.ts" %}
 
 Other links
 
