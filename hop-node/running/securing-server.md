@@ -27,7 +27,7 @@ sudo apt autoremove -y && sudo apt autoclean
 
 Disable the `root` user account and set a password for your account
 ```bash
-sudo passwd -l root
+sudo passwd -l root # While this is redundant when using Ubuntu, it is good practice to explicitly ensure that the account is disabled
 sudo passwd ubuntu
 ```
 
@@ -59,7 +59,7 @@ AllowUsers ubuntu
 Verify changes and reload service
 
 ```bash
-sudo systemctl restart ssh.socket # If you are on a version prior to 24.04, run `sudo service ssh reload` instead
+sudo systemctl restart ssh
 ```
 
 ### Install fail2ban
@@ -103,8 +103,7 @@ For example, if using [UFW](securing-server.md#create-new-user-instead-of-using-
 ```bash
 sudo ufw default deny incoming
 sudo ufw allow 22 comment "Allow SSH"
-sudo systemctl restart ufw.service
-sudo systemctl enable ufw.service
+sudo ufw enable
 ```
 
 ### Reset the server
